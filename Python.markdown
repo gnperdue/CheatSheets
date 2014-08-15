@@ -1,5 +1,5 @@
 
-### Simple Plot with Two Curves on the Same Subplot
+### simple plot with two curves on the same subplot
 
     X = np.linspace(-np.pi, np.pi, 256, endpoint=True)
     C, S = np.cos(X), np.sin(X)
@@ -7,7 +7,7 @@
     plt.plot(X,S)
     plt.show()
 
-### Custom Plot with Two Curves on the Same Subplot
+### custom plot with two curves on the same subplot
 
     # create a new figure of size 8x6 inches, 80 dots per inch
     plt.figure(figsize=(8, 6), dpi=80)
@@ -34,14 +34,14 @@
     savefig("exercise_2.png", dpi=72)
     show()
 
-### Plot with a Legend
+### plot with a legend
 
     plot1, = plt.plot(X, C, color="blue", linewidth=2.5, linestyle="-")
     plot1, = plt.plot(X, S, color="red", linewidth=2.5, linestyle="-")
     plt.legend([plot1], loc='upper left')
     plt.show()
 
-### Annotate Points
+### annotate points
 
     plot1, = plt.plot(X, C, color="blue", linewidth=2.5, linestyle="-")
     plot1, = plt.plot(X, S, color="red", linewidth=2.5, linestyle="-")
@@ -66,7 +66,7 @@
                                               connectionstyle="arc3,rad=.2"))
     plt.show()
 
-### Enlarge Tick Labels
+### enlarge tick labels
 
     plot1, = plt.plot(X, C, color="blue", linewidth=2.5, linestyle="-")
     plot1, = plt.plot(X, S, color="red", linewidth=2.5, linestyle="-")
@@ -76,7 +76,7 @@
         label.set_bbox(dict(facecolor='white', edgecolor='None', alpha=0.65))
     plt.show()
 
-### Multiple Plots in a Grid
+### multiple plots in a grid
 
     fig = plt.figure(1)
     fig.subplots_adjust(bottom=0.025, left=0.025, top=0.975, right=0.975)
@@ -91,7 +91,7 @@
     # plt.show()    # required sometimes, not others... ?
     # plt.close(1)  # makes it go away
 
-### Multiplots with Custom Axes (Start)
+### multiplots with custom axes 
 
     X = np.linspace(-2.0 * np.pi, 2.0 * np.pi, 256, endpoint=True)
     C, S = np.cos(X), np.sin(X)
@@ -105,18 +105,55 @@
     ax1.set_xlim([X.min() * 0.75, X.max() * 1.1])
     ax1.set_ylim([C.min() * 1.1, C.max() * 1.4])
     
-    #plt.subplot(2, 3, 4)
-    #plt.plot(X, C, color="red", linewidth=2.5, linestyle="--")
+    ax2 = plt.subplot(2, 3, 4)
+    plot2, = plt.plot(X, S, color="red", linewidth=2.5, linestyle="--")
+    plt.legend([plot2], loc='lower right')
+    ax2.set_xlim([X.min() * 1.25, X.max() * 0.75])
+    ax2.set_ylim([S.min() * 1.8, S.max() * 1.1])
     
-    #plt.subplot(2, 3, 5)
-    #plt.plot(X, S, color="blue", linewidth=2.5, linestyle="-")
+    ax3 = plt.subplot(2, 3, 5)
+    plot3, = plt.plot(X, S, color="blue", linewidth=2.5, linestyle="-")
+    plt.legend([plot2], loc='lower left')
+    ax3.set_xlim([X.min() * 1.1, X.max() * 1.1])
+    ax3.set_ylim([S.min() * 1.1, S.max() * 1.1])
     
-    #plt.subplot(2, 3, 6)
-    #plt.plot(X, S, color="red", linewidth=2.5, linestyle="--")
+    ax4 = plt.subplot(2, 3, 6)
+    plot4, = plt.plot(X, S, color="red", linewidth=2.5, linestyle="--")
+    ax4.set_xlim([X.min() * 1.1, X.max() * 1.1])
+    ax4.set_ylim([S.min() * 1.5, S.max() * 1.5])
     
     # plt.close(1)  # makes it go away
 
-### Summary Statistics with SciPy
+### multiple histograms on the same figure
+
+    ax1 = plt.subplot(2, 1, 1)
+    plt.hist(np.array(expend_lean))
+    ax2 = plt.subplot(2, 1, 2)
+    plt.hist(np.array(expend_obese))
+    plt.show()
+
+### custom ticks and grid
+
+    X = np.linspace(-2.0 * np.pi, 2.0 * np.pi, 256, endpoint=True)
+    C, S = np.cos(X), np.sin(X)
+    fig = plt.figure(1, figsize=(12, 16))
+    fig.subplots_adjust(bottom=0.025, left=0.025, top=0.975, right=0.975)
+    ax1 = plt.subplot(2, 1, 1)
+    plot1, = plt.plot(X, C, color="blue", linewidth=2.5, linestyle="-")
+    plot1, = plt.plot(X, S, color="red", linewidth=2.5, linestyle="-")
+    ax1.set_xlim([X.min() * 1.1, X.max() * 1.1])
+    ax1.set_ylim([C.min() * 1.1, C.max() * 1.1])
+    ax1.xaxis.set_major_locator(plt.MultipleLocator(1.0))
+    ax1.yaxis.set_major_locator(plt.MultipleLocator(1.0))
+    ax1.xaxis.set_minor_locator(plt.MultipleLocator(0.1))
+    ax1.yaxis.set_minor_locator(plt.MultipleLocator(0.1))
+    ax1.grid(which='major', axis='x', linewidth=0.75, linestyle='-', color='0.75')
+    ax1.grid(which='major', axis='y', linewidth=0.25, linestyle='-', color='0.75')
+    ax1.grid(which='minor', axis='x', linewidth=0.75, linestyle='-', color='0.75')
+    ax1.grid(which='minor', axis='y', linewidth=0.25, linestyle='-', color='0.75')
+    ax1.set_yticklabels([])
+
+### summary statistics with sciPy
 
     from scipy.stats import norm
     x = norm.rvs(size=50)
@@ -126,7 +163,7 @@
     np.median(x)
     np.percentile(x, [0, 25, 50, 75, 100])
 
-### Read a CSV with Pandas
+### read a csv with pandas
 
     import os
     import pandas as pd
@@ -138,7 +175,11 @@
     df.ivar.mean()
     df.ivar.describe()        # Summary statistics
 
-### Histogram Data
+### drop a column from a pandas `DataFrame`
+
+    energydf = energydf.drop('Unnamed: 0', 1)  # `1` is the axis
+
+### histogram data
 
     import matplotlib.pyplot as plt
     from scipy.stats import norm
@@ -151,17 +192,17 @@
     plt.hist(age_acc, bins=brk)  # R defaults to density plot; now Python
     plt.hist(age_acc, bins=brk, normed=True)  # area of column prop-to number
 
-### Empirical Cumulative Distribution
+### empirical cumulative distribution
 
     n = len(x)
     plt.plot(np.sort(x), np.arange(1, n + 1) / float(n))
 
-### Q-Q Plots
+### Q-Q plots
 
     import statsmodels.api as sm
     sm.qqplot(x, line='45')
 
-### Boxplots
+### boxplots
 
     spread = np.random.rand(50) * 100
     center = np.ones(25) * 40
@@ -170,7 +211,7 @@
     data = np.concatenate((spread, center, flier_high, flier_low), 0)
     boxplot(data)
 
-### Summary Statistics by Groups
+### summary statistics by groups
 
     path = '/Library/Frameworks/R.framework/Versions/3.0/'
     path += 'Resources/library/ISwR/rawdata/'
