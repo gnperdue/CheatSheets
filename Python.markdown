@@ -220,3 +220,12 @@
     jdf.groupby(['tanner']).mean().igf1
     jgrouped = jdf.groupby(['tanner'])
     jgrouped.agg(mean)
+
+### logistic regression
+
+    import statsmodels.api as sm
+    logit = sm.Logit(data['to_predict'], data[train_cols])  # data is a DataFrame
+    result = logit.fit()
+    print result.summary()
+    print result.conf_int()
+    print np.exp(result.params)  # odds ratios
