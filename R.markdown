@@ -1,4 +1,12 @@
 
+### get and change directories
+
+    h <- Sys.getenv("HOME")
+    d <- "work_dir"
+    w <- paste(h, d, sep="/")
+    setwd(w)
+    getwd()
+
 ### read and write csv files
 
     ?write.csv
