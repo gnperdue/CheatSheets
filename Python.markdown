@@ -175,6 +175,29 @@
     df.ivar.mean()
     df.ivar.describe()        # Summary statistics
 
+### read a csv with a datetime index
+
+    df = pd.read_csv(filename, parse_dates=True, index_col='Date')
+    df.dropna()   # clean out `NaN`s
+
+### plot a count of events binned in time
+
+    df = pd.read_csv(filename, parse_dates=True, index_col='Date')
+    filtered_df = df[df['Column_name'] == 'value_of_interest']
+    filtered_df['Count'] = 1
+    filtered_by_day = filtered_df.to_period('D')
+    filtered_counted = filtered_by_day.groupby(level=0).count()
+    filtered_counted.plot()
+
+### plot categorical activity
+
+    act = df['Activity']
+    unq = act.unique()
+    df['Category'] = 0
+    for i in unq:
+        df['Category'][df['Activity'] == i] = np.where(unq == i)[0][0]
+    df.plot(style='ko')
+
 ### drop a column from a pandas `DataFrame`
 
     energydf = energydf.drop('Unnamed: 0', 1)  # `1` is the axis
