@@ -86,13 +86,50 @@ Similarly, there is an `HLOOKUP` function.
 
 ### Filtering and sorting
 
-1. Select a set of rows or columns.
-2. Click on the "Data" tab and press the "Filter" button (under "Sort & Filter") to 
+* Select a set of rows or columns.
+* Click on the "Data" tab and press the "Filter" button (under "Sort & Filter") to 
 enable "auto-filtering".
-3. Once auto-filtering is enabled, we have drop down menus we can use to filter.
-4. We can disable the filtering by toggling the "Filter" button in the "Data" tab
+* Once auto-filtering is enabled, we have drop down menus we can use to filter.
+* We can disable the filtering by toggling the "Filter" button in the "Data" tab
 or by just working with the filtering drop-down menus.
-5. Note that with the filtering drop-downs, we can also sort the set with the
+* Note that with the filtering drop-downs, we can also sort the set with the
 filtering layer applied. For more advanced sorting, use the "Sort" button under
 the "Data" tab with all the data selected. There is a small drop-down menu on "Sort",
 and in that menu there is a "Custom Sort" option.
+
+### Using PivotTables
+
+* Select the data region (e.g., `A1:F200`).
+* From the Data tab, press the `PivotTable` button and select for Excel to create a new
+sheet with a pivot table.
+* Typically, the table is pre-populated. It is safe to uncheck all the items in the builder
+first. (You may also remove items by dragging them out the areas and "throwing them away.")
+* Then, construct the table by dragging items from the `Field name` area to the `Row Labels`
+and then to the `Column Labels` or `Values` areas. Click the `i` button on the item in
+the `Values` areas to select an aggregation function (e.g., `Sum`, `Count`, `Average`, etc.)
+* A typical approach is drag the category of "interest" to the `Row Labels` area. Then,
+drag the category you would like to aggregate over to the `Values` area and select an
+aggregation method. Finally, select the category you would like to use as a breakdown to
+the `Column Labels` area.
+
+### Using array formulae
+
+* By default, Excel functions return single values. In order to get them to return an 
+array (e.g., the output of the `TRANSPOSE()` function), you need to enter the calculation
+with `cmd-return` rather than just `return`.
+* e.g., `=SUMPRODUCT(B2:B15,TRANSPOSE('Fee Schedule'!B2:O2))` must be enterd with 
+`cmd-return` or the `SUMPRODUCT()` will fail because `TRANSPOSE()` will return a 
+single value.
+
+### Using the Solver
+
+* First, `Solver` must be added if it isn't already. Go to `Tools` then `Add-ins`
+and select `Solver.xlam` from the menu. This will cause a `Solver` button to appear in
+the `Analysis` section of the `Data` tab.
+* Click the `Solver` button.
+* Fill the `Set Objective` cell and select the `To` values for it.
+* Set the range for the `Variable Cells`.
+* Then, add constraints (values must remain integers, some other cell that is a sum of the
+variable cells must remain fixed, etc.)
+* Select a Solving Method (sublte).
+* Click `Solve`.
