@@ -133,3 +133,20 @@ the `Analysis` section of the `Data` tab.
 variable cells must remain fixed, etc.)
 * Select a Solving Method (sublte).
 * Click `Solve`.
+
+### Removing Extraneous Punctuation
+
+Clean up tweets with the following sequence:
+
+* `=LOWER(A2)`
+* `=SUBSTITUTE(B2, ". ", " ")`
+* `=SUBSTITUTE(C2, ": ", " ")`
+* `=SUBSTITUTE(D2, "?", " ")`
+* `=SUBSTITUTE(E2, "!", " ")`
+* `=SUBSTITUTE(F2, ";", " ")`
+* `=SUBSTITUTE(G2, ",", " ")`
+
+### Break up a string into tokens
+
+* In the Data tab, there is a powerful `Text to Columns` button.
+
