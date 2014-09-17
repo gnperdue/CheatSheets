@@ -1,3 +1,6 @@
+## Sources
+
+* Introduction to Probability, by J. Blitzstein and J. Hwang
 
 ### get and change directories
 
@@ -53,3 +56,30 @@
     juul$tanner <- factor(juul$tanner, labels=c("I", "II", "III", "IV", "V"))
     attach(juul)
 
+### sample a vector
+
+    n <- 10; k <- 5
+    sample(n,k)  # sample(n,n) == sample(n)
+    x <- 11:20
+    x[sample(length(x))]   # 11-20 in random order
+    x[sample(length(x), replace=T)]
+
+### get a random set of numbers
+
+    sample(letters, 7)
+
+### get a sample with non-uniform probabilities
+
+    sample(4, 3, replace=T, prob=c(0.1, 0.2, 0.3, 0.4))
+
+### demontmort simulation in three lines of R
+
+    n <- 100
+    r <- replicate(10^4, sum(sample(n)==1:n)
+    sum(r>=1)/10^4
+
+### the "classic" birthday problem in two lines of R
+
+    # we can do it in one line with `pbirthday()` and `qbirthday()`
+    r <- replicate(10^4, max(tabulate(sample(1:365, 23, replace=T))))
+    sum(r>=2)/10^4
