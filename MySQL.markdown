@@ -12,9 +12,10 @@
 
     \c
 
-### start the server
+### start/stop the server
 
     mysql.server start
+    mysql.server stop
 
 ### log on as root user
 
