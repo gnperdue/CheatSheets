@@ -32,6 +32,13 @@
     mysql -p
     mysql -p <db_name>
 
+### look around
+
+    show databases;
+    use my_database;
+    show table;
+    describe my_table;
+
 ### quit
 
     ctrl-D
