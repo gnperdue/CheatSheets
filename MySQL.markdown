@@ -32,6 +32,11 @@
     mysql -p
     mysql -p <db_name>
 
+### create a db
+
+    create database database_name;
+    use database_name;
+
 ### look around
 
     show databases;
@@ -45,3 +50,6 @@
     quit
     QUIT
 
+### inspect a db on the command line
+
+    mysqlshow --count database_name -p
