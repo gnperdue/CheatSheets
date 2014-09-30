@@ -150,3 +150,8 @@ Clean up tweets with the following sequence:
 
 * In the Data tab, there is a powerful `Text to Columns` button.
 
+### Sample from the normal distribution
+
+    =NORMINV(RAND(), MEAN, STANDARD_DEVIATION)
+
+(Note, we use the standard deviation here and not the adjusted (N-1) deviation.)
