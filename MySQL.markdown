@@ -53,3 +53,7 @@
 ### inspect a db on the command line
 
     mysqlshow --count database_name -p
+
+### dates
+
+    select current_date;
