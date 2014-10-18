@@ -57,3 +57,8 @@
 ### dates
 
     select current_date;
+
+### comparison to `NULL`
+
+    select author, author2 from myLibrary where author2 is NULL;
+    select author, author2 from myLibrary where author2 <=> NULL;
