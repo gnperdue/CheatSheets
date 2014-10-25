@@ -62,3 +62,7 @@
 
     select author, author2 from myLibrary where author2 is NULL;
     select author, author2 from myLibrary where author2 <=> NULL;
+
+### run an SQL file
+
+    source my_sql_file.sql;
