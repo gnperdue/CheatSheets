@@ -155,3 +155,9 @@ Clean up tweets with the following sequence:
     =NORMINV(RAND(), MEAN, STANDARD_DEVIATION)
 
 (Note, we use the standard deviation here and not the adjusted (N-1) deviation.)
+
+### Other useful statistical functions
+
+* Compute the total sum of squares (sum of the squared deviations of each value in the 
+outcome sample in a linear regression from the average value of the outcome sample): 
+`=DEVSQ(A1:A100)`
