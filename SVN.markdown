@@ -163,6 +163,7 @@
     svn propset svn:ignore -F .cvsignore .   # turn on svn:ignore in dir .
     svn status --no-ignore                   # circumvent any ignores
     svn add --force .  # use instead of svn add * to have SVN respect ignores in bulk adds
+    svn propset svn:ignore .                 # brings up a buffer to entire file names
 
 
 ### Depth
