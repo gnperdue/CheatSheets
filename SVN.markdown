@@ -233,3 +233,8 @@ Either checkout or `svn switch` to trunk
     echo "*.o" > .svnignore
     svn propset svn:ignore -R -F .svnignore .  # read the file, apply recursively
 
+Edit `$HOME/.subvsersion/config` to contain these lines:
+
+    [miscellany]
+    global-ignores = *.o *.lo *.la .*~ *~ .#* .DS_Store _ROOT*.cc _ROOT*.h
+
