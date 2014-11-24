@@ -66,3 +66,7 @@
 ### run an SQL file
 
     source my_sql_file.sql;
+
+### get help
+
+    help;
