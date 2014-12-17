@@ -220,16 +220,21 @@ Commands:
 
 ## Tracking a Remote Branch
 
-git checkout --track origin/{branch}
-git checkout -b {new name} origin/{branch}
+    git checkout --track origin/{branch}
+    git checkout -b {new name} origin/{branch}
 
 ## Sync to a remote branch on GitHub
 
 Example workflow (`$BRANCH` could be `master` or some other branch):
 
+    git remote -v
     git remote add upstream git@github.com:${USER}/${REPONAME}.git
     git fetch upstream
     git merge upstream/${BRANCH}
+
+## Check out a file from another branch
+
+    git checkout other_branch the_file   # Bring `the_file` from `other_branch` in.
 
 ## Cleanup Unnecessary Files
 
@@ -245,6 +250,12 @@ Example workflow (`$BRANCH` could be `master` or some other branch):
     git diff -w {or --ignore-all-space} # Do not consider whitespace changes to be significant.
     git diff --stat                     # Add statistics.
     git diff --color                    # Colorize the output.
+
+## Diff's between branches
+
+    git diff integration_b master -- src/Algorithm/Makefile 
+    git diff integration_b master -- src/Algorithm/Makefile src/BaryonResonance/Makefile
+    git diff integration_b master -- `find . -name "Mak*"`
 
 ## Change to a Specific State
 
