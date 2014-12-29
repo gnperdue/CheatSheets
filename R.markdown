@@ -2,6 +2,10 @@
 
 * Introduction to Probability, by J. Blitzstein and J. Hwang
 
+### clean up
+
+    rm(list=ls())
+
 ### get and change directories
 
     h <- Sys.getenv("HOME")
