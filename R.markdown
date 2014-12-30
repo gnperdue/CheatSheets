@@ -6,6 +6,10 @@
 
     rm(list=ls())
 
+### environment
+
+    load("PATH/.RData")
+
 ### get and change directories
 
     h <- Sys.getenv("HOME")
