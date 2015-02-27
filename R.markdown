@@ -34,6 +34,17 @@
     median(x)
     quantile(x)
     summary(x)
+    str(x)
+
+### missing entries
+
+    any(is.na(x))
+    y <- na.omit(x)
+    mydf <- na.omit(mydf)
+    complete.cases(x)
+    !complete.cases(x)
+    x[!complete.cases(x)]
+    x[complete.cases(x)]
 
 ### simple histograms
 
