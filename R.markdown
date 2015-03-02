@@ -1,6 +1,8 @@
 ## Sources
 
 * Introduction to Probability, by J. Blitzstein and J. Hwang
+* Introduction to Statistical Learning with Applications in R, by G. James,
+D. Witten, T. Hastie, and R. Tibshirani
 
 ### clean up
 
@@ -9,6 +11,11 @@
 ### environment
 
     load("PATH/.RData")
+
+### look at datasets
+
+    data()
+    data(package = .packages(all.available = TRUE))
 
 ### get and change directories
 
@@ -66,6 +73,15 @@
 
     x <- rnorm(50)
     qqnorm(x)
+
+### remove rows from a data frame
+
+    v <- -(10:85)      # vector of elements to remove
+    auto <- auto[v,]   # note the comma!
+
+### scatter plots
+
+    pairs(auto[,1:10])
 
 ### convert data in a `data.frame` to be categorical
 
