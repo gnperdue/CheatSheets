@@ -123,7 +123,7 @@ Delete Kill/Erase Text (kill ring / no kill ring)
     C-w                     Kill region.
     kill-paragraph          Delete next paragraph (long binding only).
     backward-kill-paragraph Delete the previous paragraph (long only).
-    M "-" C-k               Meta -hyphen- C-k. Delete back to the line start.
+    M "-" -C-k               Meta -hyphen- C-k. Delete back to the line start.
 
 Copy
 ----
@@ -273,6 +273,11 @@ Colors
 ------
 
     M-x list-colors-display     List available colors
+
+Interact with the Shell
+-----------------------
+
+    M-x shell     Launch a shell (then `ipython`, etc.)
 
 Very Important Commands
 -----------------------
