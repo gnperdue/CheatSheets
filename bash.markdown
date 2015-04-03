@@ -28,3 +28,7 @@ you can run.
 * `compegn -a` - show all the aliases
 * `compgen -A function` - show all the Bash functions
 
+### loops on the command line
+
+    $ for f in `ls -1 /data/playlists/data*`; do  basename $f; done
+
