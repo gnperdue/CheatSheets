@@ -12,6 +12,13 @@ D. Witten, T. Hastie, and R. Tibshirani
 
     load("PATH/.RData")
 
+### move to a working area
+
+    home <- Sys.getenv("HOME")
+    work <- "Dropbox/Programming/Programming/R/LearningR/lrCha09"
+    directory <- paste(home, work, sep="/")
+    setwd(directory)
+
 ### look at datasets
 
     data()
@@ -118,3 +125,8 @@ D. Witten, T. Hastie, and R. Tibshirani
     # we can do it in one line with `pbirthday()` and `qbirthday()`
     r <- replicate(10^4, max(tabulate(sample(1:365, 23, replace=T))))
     sum(r>=2)/10^4
+
+### replication
+
+* `rep()` repeats input several times
+* `replicate()` calls an expression several times
