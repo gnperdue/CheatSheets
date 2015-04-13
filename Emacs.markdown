@@ -1,7 +1,7 @@
 
 Modes (One Major Mode at a Time)
 --------------------------------
-Fundamental, Text, View, Shell, Outline, Indented Text, Paragraph, Picture, 
+Fundamental, Text, View, Shell, Outline, Indented Text, Paragraph, Picture,
 HTML, SGML, LaTeX, Compilation, cc, Java, Perl, SQL, Emacs Lisp, Lisp,
 Lisp Interaction
 
@@ -80,7 +80,7 @@ Moving Through Text
 Move the Page
 -------------
 
-    C-l                     Re-center the page. 
+    C-l                     Re-center the page.
     C-l C-l                 Move page so cursor sits at the top.
     C-l C-l C-l             Move page so cursor sits at the bottom.
     C-l C-l C-l C-l         Move page so cursor sits in the center, etc.
@@ -140,7 +140,7 @@ Paste
 
     C-y                     Bring a entry back from the kill ring.
     M-y                     After C-y, brings back the second-most recent
-                            deletion. 
+                            deletion.
     M-y                     After C-y, M-y, brings back the third-most
                             recent deletion, etc. Eventually we loop back
                             around to the first item in the ring.
@@ -149,8 +149,8 @@ Selecting Text
 --------------
 
     C-x h                   Select all.
-    C-<space> or C-@        Start the selection of a region. 
-    C-x C-x                 Exchange point and mark (go to beginning of 
+    C-<space> or C-@        Start the selection of a region.
+    C-x C-x                 Exchange point and mark (go to beginning of
                             marked region).
     M-h                     Mark a paragraph.
     C-x C-p                 Mark the current page (defined with C-l
@@ -165,21 +165,21 @@ Autoindent
 Transposition
 -------------
 
-    C-t                     Transpose two characters.
-    M-t                     Transpose two words (but not punctuation).
-    C-x C-t                 Transpose two lines.
-    transpose-sentences     Transpose two sentences.
-    transpose-paragraphs    Transpose two paragraphs.
+    C-t                       Transpose two characters.
+    M-t                       Transpose two words (but not punctuation).
+    C-x C-t                   Transpose two lines.
+    M-x transpose-sentences   Transpose two sentences.
+    M-x transpose-paragraphs  Transpose two paragraphs.
 
 
 Changing Capitalization
 -----------------------
 
     M-l                     Convert following word to lower-case
-    M-c                     Capitalize the the first letter of a word.
     M-l (meta-ell)          Make an entire word (after cursor) lower case.
+    M-c                     Capitalize the the first letter of a word.
     M-u                     Make an entire word (after cursor) upper case.
-    M-- (meta hyphen)       Prefix to above to fix previous word.
+    M- "-" (meta hyphen)    Prefix to above to fix previous word.
     C-x C-l                 Convert region to lower case
     C-x C-u                 Convert region to upper case
 
@@ -257,7 +257,7 @@ Formatting
     M-x set-fill-column              Set the outer edge for editing fill mode
     M-x paragraph-indent-text-mode
     M-x fill-region                  Highlight the area first
-
+    M-x delete-trailing-whitespace
 
 Keyboard Macros
 ---------------
@@ -316,3 +316,6 @@ Very Important Commands
     C-x u           Undo
 
     M-q             Trim all selected, wrapped lines.
+
+    C-g             Cancel a command before it is finished being typed.
+
