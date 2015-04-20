@@ -130,3 +130,24 @@ D. Witten, T. Hastie, and R. Tibshirani
 
 * `rep()` repeats input several times
 * `replicate()` calls an expression several times
+
+### simple regression
+
+Including prediction and confidence intervals:
+
+    attach(Auto)
+    autolm <- lm(mpg~horsepower)
+    summary(autolm)
+    plot(x=horsepower, y=mpg)
+    abline(autolm)
+    predict(autolm, data.frame(horsepower=c(98)), interval="confidence")
+    predict(autolm, data.frame(horsepower=c(98)), interval="prediction")
+    plot(predict(autolm), residuals(autolm))
+    plot(predict(autolm), rstudent(autolm))
+
+### scatterplot of all variables in a `data.frame` against each other
+
+    plot(my.df)
+
+
+
