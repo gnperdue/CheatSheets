@@ -81,7 +81,11 @@ D. Witten, T. Hastie, and R. Tibshirani
     x <- rnorm(50)
     qqnorm(x)
 
-### remove rows from a data frame
+### remove a column from a data.frame
+
+    mydf$column_name <- NULL
+
+### remove rows from a data.frame
 
     v <- -(10:85)      # vector of elements to remove
     auto <- auto[v,]   # note the comma!
@@ -145,9 +149,10 @@ Including prediction and confidence intervals:
     plot(predict(autolm), residuals(autolm))
     plot(predict(autolm), rstudent(autolm))
 
-### scatterplot of all variables in a `data.frame` against each other
+### change the number of panels in the plotting window
 
-    plot(my.df)
+    par(mfrow=c(2,2))
+    par(mfrow=c(1,1))
 
 
 
