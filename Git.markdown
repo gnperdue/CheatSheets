@@ -166,7 +166,10 @@ git log --pretty=short --abbrev-commit master~4..master~2   # Since..Until - use
     git show {tag name}
     git checkout {tag name}                   # Check out a tag; end up left in a detached HEAD
     git checkout -b {branch name} {tag name}  # Check out a tag w/o being left in detached HEAD
-    
+
+    git tag -a {tag name} {hash} -f           # update a tag to be forced to point at a new hash
+    git push origin --tags -f                 # force the new tag onto the server
+
 ## Assign Blame
 
     git blame {file}
