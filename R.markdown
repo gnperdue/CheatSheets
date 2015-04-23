@@ -155,4 +155,10 @@ Including prediction and confidence intervals:
     par(mfrow=c(1,1))
 
 
+### save a pdf of a plot
+
+    pdftitle <- sprintf("plot_%d.pdf", num)
+    pdf(pdftitle)
+    plot(x,y)
+    dev.off()
 
