@@ -162,3 +162,15 @@ Including prediction and confidence intervals:
     plot(x,y)
     dev.off()
 
+### slicing
+
+* All rows with a variable in a range:
+
+        cdc[cdc$weight<highwt & cdc$weight > lowwt,]
+
+* Row 1, Column 1, Row 1-Column 1
+
+        cdc[1,]
+        cdc[,1]
+        cdc[1,1]
+
