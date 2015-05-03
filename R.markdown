@@ -149,6 +149,22 @@ Including prediction and confidence intervals:
     plot(predict(autolm), residuals(autolm))
     plot(predict(autolm), rstudent(autolm))
 
+### multiple regression
+
+Non-linear transformations of predictors: use `I()` (`^` has special meaning in
+a formula):
+
+    linmod <- lm(y ~ x + I(x^2))
+
+Confidence intervals:
+
+    confint(fit, 'parameter', level=0.95)
+
+Check residuals:
+
+    par(mfrow=c(2,2))
+    plot(fit)
+
 ### change the number of panels in the plotting window
 
     par(mfrow=c(2,2))
@@ -173,4 +189,8 @@ Including prediction and confidence intervals:
         cdc[1,]
         cdc[,1]
         cdc[1,1]
+
+### ranges with arbitrary steps
+
+    x <- seq(-10, 10, 2)
 
