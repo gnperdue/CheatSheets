@@ -194,3 +194,15 @@ Check residuals:
 
     x <- seq(-10, 10, 2)
 
+### dates and times
+
+    > strftime(now_ct)
+    [1] "2015-04-21 08:41:52"
+    > strftime(now_ct, "It's %B %Y")
+    [1] "It's April 2015"
+
+Create a date with `lubridate`:
+
+    my_date <- ymd("2016-01 01")
+    my_date + years(1)   # period
+    my_date + dyears(1)  # duration
