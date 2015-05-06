@@ -170,6 +170,11 @@ git log --pretty=short --abbrev-commit master~4..master~2   # Since..Until - use
     git tag -a {tag name} {hash} -f           # update a tag to be forced to point at a new hash
     git push origin --tags -f                 # force the new tag onto the server
 
+Example workflow for creating and pushing a tag:
+
+    git tag -a R-2_9_0.1 -m "lamp tag for GENIE R-2_9_0 with corrected SVN paths on HepForge"
+    git push origin --tags
+
 ## Assign Blame
 
     git blame {file}
