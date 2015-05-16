@@ -2,6 +2,7 @@
 ## sources
 
 * `dev.mysql.com`
+* Learning MySQL and MariaDB, O'Reilly
 
 ## general remarks
 
@@ -70,3 +71,20 @@
 ### get help
 
     help;
+
+### set the prompt
+
+    MariaDB [(mydb)]> prompt SQL Command \d>\_
+    PROMPT set to 'SQL Command \d>\_'
+    SQL Command mydb> prompt SQL>\_
+    PROMPT set to 'SQL>\_'
+    SQL> prompt db \d>\_
+    PROMPT set to 'db \d>\_'
+    db mydb>
+
+### back up and restore
+
+    mysqldump --user='user_name' -p mydb my_table > my_table.sql
+    mysqldump --user='user_name' -p mydb > mydb.sql
+    mysql --user='user_name' -p mydb < mydb.sql  # restore
+
