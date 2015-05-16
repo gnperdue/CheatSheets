@@ -3,6 +3,7 @@
 * Introduction to Probability, by J. Blitzstein and J. Hwang
 * Introduction to Statistical Learning with Applications in R, by G. James,
 D. Witten, T. Hastie, and R. Tibshirani
+* Learning R, by R. Cotton
 
 ### clean up
 
@@ -31,6 +32,12 @@ D. Witten, T. Hastie, and R. Tibshirani
     w <- paste(h, d, sep="/")
     setwd(w)
     getwd()
+
+### list package contents and/or directory contents
+
+    list.files("/Users/perdue/Library/R/3.0/library/learningr")
+    list.files(system.file(package="learningr"))
+    list.files(system.file("extdata", package="learningr"))
 
 ### read and write csv files
 
@@ -206,3 +213,26 @@ Create a date with `lubridate`:
     my_date <- ymd("2016-01 01")
     my_date + years(1)   # period
     my_date + dyears(1)  # duration
+
+### adding and replacing columns
+
+    # add a column
+    english_monarchs$length.of.reign.years <-
+      english_monarchs$end.of.reign - english_monarchs$start.of.reign
+    # nicer
+    english_monarchs$length.of.reign.years <- with(
+      english_monarchs,
+      end.of.reign - start.of.reign
+    )
+    # possibly nicer
+    english_monarchs <- within(
+      english_monarchs,
+      {length.of.reign.years <- end.of.reign - start.of.reign}
+    )
+    # using plyr...
+    # `mutate` accepts new and revised columns as name-value pairs
+    english_monarch <- mutate(
+      english_monarchs,
+      length.of.reign.years=end.of.reign - start.of.reign,
+      reign.was.more.than.30.years=length.of.reign.years>30
+    )
