@@ -66,6 +66,7 @@ D. Witten, T. Hastie, and R. Tibshirani
     !complete.cases(x)
     x[!complete.cases(x)]
     x[complete.cases(x)]
+    navars <- sapply(mydf, function(x) {sum(is.na(x))})  # sum NA's / column
 
 ### simple histograms
 
@@ -236,3 +237,17 @@ Create a date with `lubridate`:
       length.of.reign.years=end.of.reign - start.of.reign,
       reign.was.more.than.30.years=length.of.reign.years>30
     )
+
+### missingness map
+
+    require(Amelia)
+    missmap(mydf, col=c("yellow","black"), legend = FALSE)
+
+### easy mosaic plots
+
+    require(vcd)
+    mosaicplot(mydf$var1 ~ mydf$var2,
+               main="Main Title", shade=FALSE,
+               color=TRUE, xlab="var1", ylab="var2")
+
+
