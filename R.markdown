@@ -98,6 +98,16 @@ D. Witten, T. Hastie, and R. Tibshirani
     v <- -(10:85)      # vector of elements to remove
     auto <- auto[v,]   # note the comma!
 
+### sorting
+
+    x <- seq(1,11,2)
+    y <- seq(12,2,-2)
+    df <- data.frame(x,y)
+    y_order <- order(df$y)
+    df[y_order,]
+
+Also, `rank()` may help for breaking ties.
+
 ### scatter plots
 
     pairs(auto[,1:10])
