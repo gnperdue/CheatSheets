@@ -88,3 +88,7 @@
     mysqldump --user='user_name' -p mydb > mydb.sql
     mysql --user='user_name' -p mydb < mydb.sql  # restore
 
+### study column structure
+
+    SHOW COLUMNS FROM my_table LIKE 'my_column'\G
+
