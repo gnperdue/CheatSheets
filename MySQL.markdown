@@ -92,3 +92,12 @@
 
     SHOW COLUMNS FROM my_table LIKE 'my_column'\G
 
+### column defaults
+
+    ALTER TABLE my_table ALTER my_column SET DEFAULT 7;
+    ALTER TABLE my_table ALTER my_column DROP DEFAULT;
+
+### change columns
+
+    ALTER TABLE my_table CHANGE COLUMN col1 col2 INT DEFAULT 3;
+
