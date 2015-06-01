@@ -101,3 +101,6 @@
 
     ALTER TABLE my_table CHANGE COLUMN col1 col2 INT DEFAULT 3;
 
+### drop a table
+
+    DROP TABLE IF EXISTS my_table;
