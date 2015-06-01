@@ -32,7 +32,17 @@ Trees
     TTree *mytree = _file0->Get("CCInclusiveReco")
     mytree->Draw("ev_gate","n_prim_tracks_kinked>0")
 
+Trees - Draw
+------------
 
+    mytree->Draw("myvar","","",1)      # 1 event
+    mytree->Draw("myvar","","",1,10)   # 1 event, use 10th event
+    mytree->Draw("myvar","","",10,10)  # 10 events, start with 10th
+
+Trees - Print
+-------------
+
+    mytree->Scan("myvar[0]","","",1,1)  # print element 0 of myvar array (1 event, start at 1)
 
 Math
 -----
