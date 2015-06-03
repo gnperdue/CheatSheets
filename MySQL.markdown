@@ -104,3 +104,9 @@
 ### drop a table
 
     DROP TABLE IF EXISTS my_table;
+
+### enums
+
+    -- add a column to an existing table with enum
+    ALTER TABLE my_table
+    ADD COLUMN membership_type ENUM('basic', 'premium');
