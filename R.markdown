@@ -260,4 +260,7 @@ Create a date with `lubridate`:
                main="Main Title", shade=FALSE,
                color=TRUE, xlab="var1", ylab="var2")
 
+### set the random number seed
+
+    set.seed(1)   # etc.
 
