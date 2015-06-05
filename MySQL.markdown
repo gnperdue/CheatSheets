@@ -110,3 +110,17 @@
     -- add a column to an existing table with enum
     ALTER TABLE my_table
     ADD COLUMN membership_type ENUM('basic', 'premium');
+
+### delete a row
+
+    DELETE FROM my_table WHERE id_number = 101;
+
+### pattern-match to get a list of columns
+
+    SHOW COLUMNS FROM my_table LIKE '%id';
+
+### more info on columns
+
+    SHOW FULL COLUMNS FROM my_table;
+
+
