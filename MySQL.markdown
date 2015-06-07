@@ -123,4 +123,8 @@
 
     SHOW FULL COLUMNS FROM my_table;
 
+### copy a table in two steps
+
+    REATE TABLE test.my_table LIKE mydb.my_table;
+    INSERT INTO test.my_table SELECT * FROM mydb.my_table;
 
