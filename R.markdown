@@ -97,6 +97,7 @@ D. Witten, T. Hastie, and R. Tibshirani
 
     v <- -(10:85)      # vector of elements to remove
     auto <- auto[v,]   # note the comma!
+    df <- subset(df, subset = !df$var=="value")
 
 ### sorting
 
