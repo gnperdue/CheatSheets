@@ -265,3 +265,11 @@ Create a date with `lubridate`:
 
     set.seed(1)   # etc.
 
+### unit tests - RUnit
+
+    library(RUnit)
+    # RUnit looks for files with names like "runit*.R" and for functions
+    # internally with names like "test*"
+    suite <- defineTestSuite("a name", "the directory")
+    runTestSuite(suite)
+
