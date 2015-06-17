@@ -123,8 +123,16 @@
 
     SHOW FULL COLUMNS FROM my_table;
 
-### copy a table in two steps
+### copy a table into a new table in two steps
 
-    REATE TABLE test.my_table LIKE mydb.my_table;
+    CREATE TABLE test.my_table LIKE mydb.my_table;
     INSERT INTO test.my_table SELECT * FROM mydb.my_table;
+
+* Note, to copy into an "existing" table, a good algorithm is to first
+back up the table, then drop it, then follow the steps above:
+
+        $ mysqldump --user='user_name' -p mydb mytable > mydb_mytable.sql
+        SQL> DROP TABLE mydb.mytable;
+        SQL> CREATE TABLE mydb.mytable LIKE test.mytable;
+        SQL> INSERT INTO mydb.mytable SELECT * FROM test.mytable;
 
