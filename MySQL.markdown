@@ -136,3 +136,16 @@ back up the table, then drop it, then follow the steps above:
         SQL> CREATE TABLE mydb.mytable LIKE test.mytable;
         SQL> INSERT INTO mydb.mytable SELECT * FROM test.mytable;
 
+### ignore dupes and insert the rest
+
+    INSERT IGNORE INTO my_db.my_table
+    (field1, field2)
+    SELECT field1, field2
+    FROM other_db.other_table;
+
+### replace dupes and insert the rest
+
+    REPLACE INTO my_db.my_table
+    (field1, field2)
+    SELECT field1, field2
+    FROM other_db.other_table;
