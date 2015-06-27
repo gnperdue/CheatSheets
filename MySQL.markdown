@@ -154,3 +154,9 @@ back up the table, then drop it, then follow the steps above:
     (field1, field2)
     SELECT field1, field2
     FROM other_db.other_table;
+
+### priorities of inserts
+
+    INSERT LOW_PRIORITY INTO ...
+    INSERT DELAYED INTO ...
+    INSERT HIGH_PRIORITY INTO ...
