@@ -88,6 +88,11 @@
     mysqldump --user='user_name' -p mydb > mydb.sql
     mysql --user='user_name' -p mydb < mydb.sql  # restore
 
+### wildcards
+
+    SELECT field1, field2
+    FROM my_db WHERE field1 LIKE 'A string beginning%';
+
 ### study column structure
 
     SHOW COLUMNS FROM my_table LIKE 'my_column'\G
