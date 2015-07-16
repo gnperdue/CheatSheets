@@ -138,6 +138,12 @@ Perform in the directory you wish to be the root.
     git show --pretty=fuller
     git rev-parse {sha1}
 
+## Edit History
+
+    git commit --amend -m "New message"   # ONLY if you haven't pushed yet
+                                          # old message will still show in `reflog`
+                                          # but not in `log`
+                                          
 ## Refer to Commits Relatively
 
 Relative Commit Names
