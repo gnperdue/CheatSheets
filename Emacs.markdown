@@ -134,6 +134,7 @@ Comment
 -------
 
     M-;          Comment/uncomment selected region
+    C-c /        Un/Comment a line (using *my* .emacs)
 
 Paste
 -----
