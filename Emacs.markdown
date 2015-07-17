@@ -5,6 +5,8 @@ Fundamental, Text, View, Shell, Outline, Indented Text, Paragraph, Picture,
 HTML, SGML, LaTeX, Compilation, cc, Java, Perl, SQL, Emacs Lisp, Lisp,
 Lisp Interaction
 
+    C-h m                Check major mode
+
 Minor Modes
 -----------
 Many!
