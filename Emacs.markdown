@@ -156,6 +156,11 @@ Selecting Text
     C-x C-p                 Mark the current page (defined with C-l
                             chars).
 
+Inserting Text
+--------------
+
+    C-o                     Insert a line above the current line.
+
 Autoindent
 ----------
 
