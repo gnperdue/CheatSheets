@@ -273,3 +273,7 @@ Create a date with `lubridate`:
     suite <- defineTestSuite("a name", "the directory")
     runTestSuite(suite)
 
+### matrices
+
+    smallpox <- matrix(c(238,5136,6,844), nrow=2, byrow=TRUE,
+    dimnames=list(c("lived","died"), c("yes","no")))

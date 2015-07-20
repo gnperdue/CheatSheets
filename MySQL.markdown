@@ -162,3 +162,12 @@ back up the table, then drop it, then follow the steps above:
     INSERT LOW_PRIORITY INTO ...
     INSERT DELAYED INTO ...
     INSERT HIGH_PRIORITY INTO ...
+
+### multi-table delete examples
+
+    DELETE FROM table1, table2
+    USING table1 JOIN table2
+    WHERE field1 = 'value'
+    AND filed2 LIKE '%another value'
+    AND table1.row_id = table2.row_id;
+
