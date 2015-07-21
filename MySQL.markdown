@@ -172,3 +172,10 @@ back up the table, then drop it, then follow the steps above:
     AND filed2 LIKE '%another value'
     AND table1.row_id = table2.row_id;
 
+### multi-column update example
+
+    UPDATE my_table
+    SET field1 = 'the value',
+        a_date = DATE_ADD(CURDATE(), INTERVAL 2 MONTH)
+    WHERE row_id = 10;
+
