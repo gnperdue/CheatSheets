@@ -179,3 +179,11 @@ back up the table, then drop it, then follow the steps above:
         a_date = DATE_ADD(CURDATE(), INTERVAL 2 MONTH)
     WHERE row_id = 10;
 
+### delete from multiple tables example
+
+    DELETE FROM table1, table2
+    USING table1 JOIN table2
+    WHERE table1.field1 = 'a value'
+    AND table1.field2 = 'another value'
+    AND table1.row_id = table2.the_row_id;
+
