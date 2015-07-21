@@ -58,6 +58,7 @@
 ### dates
 
     select current_date;
+    SELECT DATE_ADD(CURDATE(), INTERVAL 1 MONTH);
 
 ### comparison to `NULL`
 
