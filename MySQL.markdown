@@ -187,3 +187,7 @@ back up the table, then drop it, then follow the steps above:
     AND table1.field2 = 'another value'
     AND table1.row_id = table2.the_row_id;
 
+### distinct/unique instances
+
+    SELECT DISTINCT(field1) FROM my_table;
+
