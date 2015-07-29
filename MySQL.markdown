@@ -198,3 +198,11 @@ back up the table, then drop it, then follow the steps above:
         SELECT field FROM my_table
         WHERE field REGEXP 'value1|value2';
 
+### prevent orphaned rows
+
+    DELETE FROM table1, table2
+    USING table1 LEFT JOIN table2
+    ON table1.field_id = table2.field_id
+    WHERE field1 = 'value'
+    AND field2 = 'another value';
+
