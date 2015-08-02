@@ -206,3 +206,15 @@ back up the table, then drop it, then follow the steps above:
     WHERE field1 = 'value'
     AND field2 = 'another value';
 
+### send to upper or lower case
+
+* `LOWER()` or `LCASE()`
+* `UPPER()` or `UCASE()`
+
+### 'quote' text
+
+* `QUOTE()`
+
+### trim whitespace
+
+* `LTRIM()`, `RTRIM()`, and `TRIM()`
