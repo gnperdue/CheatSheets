@@ -224,3 +224,9 @@ back up the table, then drop it, then follow the steps above:
 * `LPAD()`
 * `RPAD()`
 * `SPACE()`
+
+### extraction
+
+* `LEFT(<field>, <chars from the left>)`
+* `RIGHT(<field>, <chars from the right>)`
+* `MID(<field>, <start point>, <# of chars>)`
