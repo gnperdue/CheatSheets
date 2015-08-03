@@ -218,3 +218,9 @@ back up the table, then drop it, then follow the steps above:
 ### trim whitespace
 
 * `LTRIM()`, `RTRIM()`, and `TRIM()`
+
+### padding
+
+* `LPAD()`
+* `RPAD()`
+* `SPACE()`
