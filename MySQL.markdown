@@ -231,3 +231,4 @@ back up the table, then drop it, then follow the steps above:
 * `RIGHT(<field>, <chars from the right>)`
 * `MID(<field>, <start point>, <# of chars; default=ALL>)`
 * `SUBSCTRING()` is the same as `MID()`
+* `SUBSTRING(<field FROM <#> FOR <#>)` - wordier syntax
