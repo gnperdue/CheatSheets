@@ -32,6 +32,8 @@ Trees
     TTree *mytree = _file0->Get("CCInclusiveReco")
     mytree->Draw("ev_gate","n_prim_tracks_kinked>0")
 
+    TTree *mytree = _file0->Get("RecoTracks");
+
 Trees - Draw
 ------------
 

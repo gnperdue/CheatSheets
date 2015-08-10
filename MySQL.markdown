@@ -237,3 +237,4 @@ back up the table, then drop it, then follow the steps above:
 ### locating
 
 * `LOCATE()`
+* `POSITION(<search string> IN <containing string>)`
