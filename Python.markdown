@@ -7,6 +7,15 @@
     plt.plot(X,S)
     plt.show()
 
+### simple scatter plot
+
+    plt.scatter(x, y, color='blue', marker='o')
+    plt.title('Y vs X')
+    plt.xlabel('X (units)')
+    plt.ylabel('Y (units)')
+    plt.axis([0, 105, 0, 80])
+    plt.show()
+
 ### custom plot with two curves on the same subplot
 
     # create a new figure of size 8x6 inches, 80 dots per inch
