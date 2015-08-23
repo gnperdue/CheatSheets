@@ -1,5 +1,5 @@
 
-### simple plot with two curves on the same subplot
+### simple matplotlib plot with two curves on the same subplot
 
     X = np.linspace(-np.pi, np.pi, 256, endpoint=True)
     C, S = np.cos(X), np.sin(X)
@@ -7,13 +7,28 @@
     plt.plot(X,S)
     plt.show()
 
-### simple scatter plot
+### simple matplotlib scatter plot
 
     plt.scatter(x, y, color='blue', marker='o')
     plt.title('Y vs X')
     plt.xlabel('X (units)')
     plt.ylabel('Y (units)')
     plt.axis([0, 105, 0, 80])
+    plt.show()
+
+### simple matplotlib legend example
+
+    xs = [x / 10.0 for x in range(-50, 50)]
+    plt.plot(xs, [scipy.stats.norm.pdf(x, scale=1) for x in xs],
+             '-', label='mu=0, sigma=1')
+    plt.plot(xs, [scipy.stats.norm.pdf(x, scale=2) for x in xs],
+             '--', label='mu=0, sigma=2')
+    plt.plot(xs, [scipy.stats.norm.pdf(x, scale=0.5) for x in xs],
+             ':', label='mu=0, sigma=0.5')
+    plt.plot(xs, [scipy.stats.norm.pdf(x, loc=-1) for x in xs],
+             '-.', label='mu=-1, sigma=1')
+    plt.legend()
+    plt.title('Various Normal PDFs')
     plt.show()
 
 ### custom plot with two curves on the same subplot
