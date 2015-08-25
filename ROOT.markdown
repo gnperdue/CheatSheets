@@ -1,5 +1,4 @@
-Histograms
-----------
+## Histograms
 
     // Get better color palette.
     gStyle->SetPalette(1);
@@ -12,8 +11,7 @@ Histograms
     'Canvas 1'->SetFillColor(kWhite);
 
 
-Chains
-------
+## Chains
 
     TChain ch("ch","ch")                   
     ch->Add("SIM_minerva_00000513*.root/CCInclusiveReco",0)
@@ -24,9 +22,7 @@ Chains
     ch.MakeClass("RecoTracks")
 
 
-
-Trees
------
+## Trees
 
     TFile *_file0 = TFile::Open("/minerva/data/users/perdue/mc_production/nogrid/minerva/ana/v9r0p2/00/00/11/00/SIM_minerva_00001100_0001_Ana_Tuple_v1_v9r0p2.root")
     TTree *mytree = _file0->Get("CCInclusiveReco")
@@ -34,20 +30,20 @@ Trees
 
     TTree *mytree = _file0->Get("RecoTracks");
 
-Trees - Draw
-------------
+
+### Trees - Draw
 
     mytree->Draw("myvar","","",1)      # 1 event
     mytree->Draw("myvar","","",1,10)   # 1 event, use 10th event
     mytree->Draw("myvar","","",10,10)  # 10 events, start with 10th
 
-Trees - Print
--------------
+
+### Trees - Print
 
     mytree->Scan("myvar[0]","","",1,1)  # print element 0 of myvar array (1 event, start at 1)
 
-Math
------
+
+## Math
 
     root [3] TMath::Factorial(3)
     (Double_t)6.00000000000000000e+00
@@ -63,8 +59,24 @@ Math
     (const double)5.00000000000000028e-02
 
 
-Classes
--------
+## Classes
 
 http://www-glast.slac.stanford.edu/software/root/howto/writing_root_classes.htm
 
+
+## GENIE Interactive Example
+
+    $ genie gntp.100.ghep.root
+    genie[2] TTree *mytree = 0;
+    genie[3] _file0->GetObject("gtree", mytree);
+    genie[4] Long64_t nEntries = mytree->GetEntries();
+    genie[5] cout << nEntries << endl;
+    1000
+    genie[6] genie::NtpMCEventRecord* myentry = new genie::NtpMCEventRecord();
+    // ... (this will produce the welcome message)
+    genie[7] mytree->SetBranchAddress("gmcrec", &myentry);
+    genie[8] mytree->GetEntry(0);
+    genie[9] myentry->PrintToStream(cout);
+    // ... (a lot of stuff)
+    genie[10] myentry->event->XSec()
+    (const double)1.48164559715832651e-10
