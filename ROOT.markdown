@@ -13,7 +13,7 @@
 
 ## Chains
 
-    TChain ch("ch","ch")                   
+    TChain ch("ch","ch")
     ch->Add("SIM_minerva_00000513*.root/CCInclusiveReco",0)
 
     TChain ch("ch","ch");
@@ -64,7 +64,7 @@
 http://www-glast.slac.stanford.edu/software/root/howto/writing_root_classes.htm
 
 
-## GENIE Interactive Example
+## GENIE Interactive Examples
 
     $ genie gntp.100.ghep.root
     genie[2] TTree *mytree = 0;
@@ -80,3 +80,21 @@ http://www-glast.slac.stanford.edu/software/root/howto/writing_root_classes.htm
     // ... (a lot of stuff)
     genie[10] myentry->event->XSec()
     (const double)1.48164559715832651e-10
+
+    genie [1] TChain ch("gtree")
+    genie [2] ch->Add("/pnfs/minerva/scratch/users/minervapro/mc_production_genie_DFR_v10r8p4/grid/central_value/minerva/genie/v10r8p4/00/01/00/11/SIM_minerva_00010011_*_ghep.root/gtree",0)
+    genie [3] Long64_t nEntries = ch->GetEntries();
+    genie [4] cout << nEntries << endl;
+    100000
+    genie [5] genie::NtpMCEventRecord* myentry = new genie::NtpMCEventRecord();
+    // ...
+    genie [6] ch->SetBranchAddress("gmcrec", &myentry);
+    genie [7] ch->GetEntry(0);
+    genie [8] myentry->PrintToStream(cout);
+    // ...
+    genie [9] ch->GetEntry(2000);
+    genie [10] myentry->PrintToStream(cout);
+    // ...
+    genie [11] myentry->event->XSec()
+    (const double)3.35586289456737729e-12
+
