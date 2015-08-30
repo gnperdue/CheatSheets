@@ -226,6 +226,14 @@ Create a date with `lubridate`:
     my_date + years(1)   # period
     my_date + dyears(1)  # duration
 
+Get a span of days between a start and a finish:
+
+    library(lubridate)
+    start <- ymd("2014-05-01")
+    finish <- ymd("2015-03-18")
+    finish - start
+    # Time difference of 321 days
+
 ### adding and replacing columns
 
     # add a column
