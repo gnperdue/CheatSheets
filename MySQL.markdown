@@ -8,6 +8,8 @@
 
 * Commands are not case sensitive.
 * Commands may span multiple lines.
+* Use `;` as a command end marker, or `\G` for a different printout (often
+with more or more readable detail).
 
 ### cancel command entry
 
@@ -44,6 +46,7 @@
     use my_database;
     show table;
     describe my_table;
+    show create table <my_table>\G
 
 ### quit
 
