@@ -241,3 +241,9 @@ back up the table, then drop it, then follow the steps above:
 
 * `LOCATE()`
 * `POSITION(<search string> IN <containing string>)`
+
+### count groups
+
+    SELECT my_field, COUNT(my_field)
+    FROM my_table
+    GROUP BY my_field;
