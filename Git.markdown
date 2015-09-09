@@ -181,6 +181,11 @@ Example workflow for creating and pushing a tag:
     git tag -a R-2_9_0.1 -m "lamp tag for GENIE R-2_9_0 with corrected SVN paths on HepForge"
     git push origin --tags
 
+Example workflow for moving a tag:
+
+    git tag -a R-2_9_0.1 80000766b216b23c067d46839b1469fd1f1d366f -f  # point to new commit
+    git push origin --tags -f
+
 ## Assign Blame
 
     git blame {file}
