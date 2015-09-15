@@ -10,6 +10,8 @@
     // Set background color to white
     'Canvas 1'->SetFillColor(kWhite);
 
+    // print contents to file (bin, lower edge, err)
+    histo->Print("all"); > histo_out.txt
 
 ## Chains
 
