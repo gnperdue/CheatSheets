@@ -1,3 +1,14 @@
+## Macros
+
+    // build into `.so` for interactive use
+    root [0] .L ArrayOfHists.C+
+    Info in <TUnixSystem::ACLiC>: creating shared library ./ArrayOfHists_C.so
+    root [1] arr_of_hists()
+
+    // quick and easy compile - use g++ or clang or whatever is appropriate
+    $ g++ -o ArrayOfHists.exe ArrayOfHists.C `root-config --cflags --libs`
+    $ ./ArrayOfHists.exe
+
 ## Histograms
 
     // Get better color palette.
