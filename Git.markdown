@@ -251,6 +251,10 @@ Example workflow (`$BRANCH` could be `master` or some other branch):
     git fetch upstream
     git merge upstream/${BRANCH}
 
+And, if you screw up the origin
+
+    git remote rm origin              # or `destination`, etc.
+
 ## Check out a file from another branch
 
     git checkout other_branch the_file   # Bring `the_file` from `other_branch` in.
