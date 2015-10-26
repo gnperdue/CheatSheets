@@ -355,3 +355,17 @@ Two steps:
 
 Where, of course, `master` is the branch you want.
 
+## Merge branches from GitHub pull requests by hand to a new branch
+
+GitHub puts these instructions on the pull request if you look for them, but
+here they are anyway (mostly as a one-time log of everything working):
+
+0. ` git clone git@github.com:GENIEMC/GENIE_2_9_0.git`
+1. `cd GENIE_2_9_0`
+2. `git checkout -b igor144-rein_sehgal master`
+3. `git pull https://github.com/igor144/GENIE_2_9_0.git rein_sehgal`
+4. `git push origin igor144-rein_sehgal`
+
+GitHub goes on to tell you how to merge into master instead of pushing the new
+branch, but I want to push the new branch...
+

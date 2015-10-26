@@ -42,6 +42,7 @@
     mytree->Draw("ev_gate","n_prim_tracks_kinked>0")
 
     TTree *mytree = _file0->Get("RecoTracks");
+    TTree *mytree = _file0->Get("MLVFSamplePrepTool");
 
 
 ### Trees - Draw
