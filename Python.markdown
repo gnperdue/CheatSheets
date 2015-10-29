@@ -115,6 +115,11 @@
     # plt.show()    # required sometimes, not others... ?
     # plt.close(1)  # makes it go away
 
+### equal axes
+
+    plt.plot(xx, yy)    # xx = whatever, etc.
+    plt.axes().set_aspect('equal', 'datalim')
+
 ### multiplots with custom axes 
 
     X = np.linspace(-2.0 * np.pi, 2.0 * np.pi, 256, endpoint=True)
