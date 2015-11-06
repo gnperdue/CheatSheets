@@ -186,6 +186,8 @@ Example workflow for moving a tag:
     git tag -a R-2_9_0.1 80000766b216b23c067d46839b1469fd1f1d366f -f  # point to new commit
     git push origin --tags -f
 
+    git show <tag-name>                       # look at a tag (can `show` other stuff too)
+
 ## Assign Blame
 
     git blame {file}
