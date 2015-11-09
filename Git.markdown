@@ -281,6 +281,7 @@ And, if you screw up the origin
     git diff integration_b master -- src/Algorithm/Makefile 
     git diff integration_b master -- src/Algorithm/Makefile src/BaryonResonance/Makefile
     git diff integration_b master -- `find . -name "Mak*"`
+    git diff --shortstst integration_b master      # just the total number of changes
 
 ## Change to a Specific State
 
