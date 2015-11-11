@@ -487,6 +487,7 @@ Screen Redraw
 -------------
     zz                                              Redraw the screen with the cursor position in the vertical center of the page.
     z.                                              Redraw the screen with the cursor position in the vertical center of the page.
+    zt                                              Redraw the screen with the cursor position at the top of the page.
     <ctrl-l>                                        Clear and redraw the screen. 
 
 Ex Commands
