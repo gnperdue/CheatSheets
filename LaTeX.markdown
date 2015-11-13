@@ -19,3 +19,8 @@
       \label{fig:recursiontree}
     \end{figure}
 
+### use numbers instead of letters in the appendix
+
+    \appendix
+    \renewcommand{\thesection}{\arabic{section}}
+
