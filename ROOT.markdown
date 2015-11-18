@@ -111,4 +111,11 @@ http://www-glast.slac.stanford.edu/software/root/howto/writing_root_classes.htm
     // ...
     genie [11] myentry->event->XSec()
     (const double)3.35586289456737729e-12
-
+    genie [12] myentry->event.Summary()->ProcInfo()->IsMEC()
+    (const bool)1
+    genie [13] myentry->event.Summary()->ProcInfo()->ScatteringTypeId()
+    (const genie::ScatteringType_t)10
+    genie [14] myentry->event.Summary()->ProcInfo()->InteractionTypeAsString()
+    (class TString)"Weak[CC]"
+    genie [15] myentry->event.Summary()->ProcInfo()->ScatteringTypeAsString()
+    (class TString)"MEC"
