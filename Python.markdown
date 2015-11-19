@@ -1,4 +1,10 @@
 
+### debugger tricks in ipython
+
+    import pdb
+    ipdb = pdb.Pdb()
+    ipdb.runcall(is_chain, chain, 5)  # fn, arg1, arg2, etc.
+
 ### simple matplotlib plot with two curves on the same subplot
 
     X = np.linspace(-np.pi, np.pi, 256, endpoint=True)
