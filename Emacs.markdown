@@ -95,6 +95,9 @@ Switch Buffers
     C-x <right>             Cycle through buffers.
     C-x C-b                 List buffers.
     C-x 1                   Close all split windows but the active one.
+    C-x 2                   Split frame above and below
+    C-x 3                   Split frame left and right
+    C-x 0                   Delete current window
 
 Undo
 ----
