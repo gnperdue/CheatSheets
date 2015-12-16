@@ -14,3 +14,11 @@
 
     docker-machine help
 
+## Images
+
+    docker images      # see what is available
+
+## Running containers
+
+    docker ps          # see what is running
+    docker ps -a       # see everything, even stopped containers
