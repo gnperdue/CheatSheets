@@ -4,6 +4,7 @@
     docker-machine create --driver virtualbox dev  # if new
     docker-machine start dev
     eval "$(docker-machine env dev)"
+    docker-machine ssh dev                         # ssh into the docker host
     docker-machine stop dev                        # when done
 
 ## Look at hosts
@@ -22,3 +23,11 @@
 
     docker ps          # see what is running
     docker ps -a       # see everything, even stopped containers
+    docker ps -a -q    # get just the container IDs for all jobs
+    docker create      # "stage" a container (then `start` it)
+    docker stop        # stop a container
+    docker kill        # kill a container
+    docker start       # start a container
+    docker restart     # restart a container
+    docker rm          # remove the container (can't `restart` it then)
+    docker rm $(docker ps -a -q)$    # remove all stopped containers
