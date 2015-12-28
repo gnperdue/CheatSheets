@@ -24,3 +24,14 @@
     \appendix
     \renewcommand{\thesection}{\arabic{section}}
 
+### footnotes
+
+    \footnote{text, blah, blah}
+
+### urls
+
+    \usepackage{hyperref}
+
+Then:
+
+    \url{www.example.com}
