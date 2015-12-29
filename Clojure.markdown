@@ -1,4 +1,11 @@
 
+### Leiningen
+
+* `lein new app my-app` - make a new project
+* (in `my-app` dir): `lein run`
+* (in `my-app` dir): `lein repl`
+* (in `my-app` dir): `emacs src/my-app/core.clj` and `M-x cider-jack-in`
+
 ### Paredit
 
 * Use `M-(` for `paredit-wrap-around` and `C-<right arrow>` and `C-<left arrow>`
