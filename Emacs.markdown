@@ -1,3 +1,9 @@
+Sources
+-------
+
+* O'Reilly Learning GNU Emacs
+* http://ergoemacs.org/emacs/emacs.html
+
 
 Modes (One Major Mode at a Time)
 --------------------------------
@@ -329,4 +335,13 @@ Very Important Commands
     M-q             Trim all selected, wrapped lines.
 
     C-g             Cancel a command before it is finished being typed.
+
+Special Packages: Ido
+---------------------
+
+    C-x b      ido-switch-buffer
+
+Inside `ido-switch-buffer`:
+
+    C-f        Stop suggestion (make a new file) (at end of name, may need 2x)
 
