@@ -188,6 +188,10 @@ Example workflow for moving a tag:
 
     git show <tag-name>                       # look at a tag (can `show` other stuff too)
 
+Look at remote tags
+
+    git ls-remote --tags
+
 ## Assign Blame
 
     git blame {file}
@@ -198,6 +202,10 @@ Example workflow for moving a tag:
     git branch                                # Topic branches
     git branch -r                             # Remote branches
     git branch -a                             # Topic and remote branches
+
+More on remote branches
+
+    git remote show origin
 
 ## Examine a Branch
 
