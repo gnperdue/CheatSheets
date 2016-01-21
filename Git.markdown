@@ -192,6 +192,10 @@ Look at remote tags
 
     git ls-remote --tags
 
+Delete a tag when it has the same name as a branch
+
+    git push --delete origin refs/tags/R-2_10_2
+
 ## Assign Blame
 
     git blame {file}
