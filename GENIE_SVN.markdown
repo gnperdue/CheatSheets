@@ -22,6 +22,10 @@
       svn+ssh://gnperdue@svn.hepforge.org/hepforge/svn/genie/generator/trunk \
       svn+ssh://gnperdue@svn.hepforge.org/hepforge/svn/genie/generator/devel/branches/mec_devel
 
+    svn copy -m "DIS Re-eval" \
+      svn+ssh://gnperdue@svn.hepforge.org/hepforge/svn/genie/generator/trunk \
+      svn+ssh://gnperdue@svn.hepforge.org/hepforge/svn/genie/generator/devel/branches/dis_reeval
+
     svn co svn+ssh://gnperdue@svn.hepforge.org/hepforge/svn/genie/generator/devel/branches/Redtop-2_8_6 Redtop-2_8_6
     svn co svn+ssh://gnperdue@svn.hepforge.org/hepforge/svn/genie/generator/devel/branches/mec_devel mec_devel
 

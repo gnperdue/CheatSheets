@@ -17,7 +17,8 @@
 
 ## Images
 
-    docker images      # see what is available
+    docker images           # see what is available
+    docker rmi <image id>   # remove an image
 
 ## Running containers
 
