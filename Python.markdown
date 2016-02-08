@@ -291,3 +291,10 @@ In IPython:
     print result.summary()
     print result.conf_int()
     print np.exp(result.params)  # odds ratios
+
+### `display` images in IPython notebook
+
+    from IPython.display import display, Image
+    test_image = Image('full_path/to/file.png')
+    display(test_image)
+
