@@ -201,6 +201,10 @@ In IPython:
     np.std(x)
     np.median(x)
     np.percentile(x, [0, 25, 50, 75, 100])
+    norm.interval(0.95)      # tuple with 95% CL endpoints
+    norm.interval(0.95, loc=mu, scale=scipy.stats.sem(x)) 
+    norm.ppf(0.025)          # equiv to R qnorm(0.25)
+    np.asarray([norm.ppf(0.025), norm.ppf(0.975)])
 
 ### read a csv with pandas
 
@@ -213,6 +217,8 @@ In IPython:
     np.mean(df.ivar)
     df.ivar.mean()
     df.ivar.describe()        # Summary statistics
+
+Use `read_table` instead of `read_csv` to get tsv files, etc.
 
 ### read a csv with a datetime index
 
