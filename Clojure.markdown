@@ -1,4 +1,8 @@
 
+### Namespaces
+
+* `doc` is in `clojure.repl`
+
 ### Leiningen
 
 * `lein new app my-app` - make a new project
