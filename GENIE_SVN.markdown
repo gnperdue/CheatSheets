@@ -34,6 +34,7 @@
     svn export svn+ssh://gnperdue@svn.hepforge.org/hepforge/svn/genie/generator/branches/R-2_10_0 GENIE-Generator_v2.10.0
     svn export svn+ssh://gnperdue@svn.hepforge.org/hepforge/svn/genie/generator/branches/R-2_10_2 GENIE-Generator_v2.10.2
     svn export svn+ssh://gnperdue@svn.hepforge.org/hepforge/svn/genie/generator/branches/R-2_10_2 GENIE
+    svn export svn+ssh://gnperdue@svn.hepforge.org/hepforge/svn/genie/generator/branches/R-2_10_4 GENIE
     svn export svn+ssh://gnperdue@svn.hepforge.org/hepforge/svn/genie/generator/trunk trunk
 
     svn move -m "rename branch for S. Dytman" \
