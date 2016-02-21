@@ -247,6 +247,10 @@ Use `read_table` instead of `read_csv` to get tsv files, etc.
 
     energydf = energydf.drop('Unnamed: 0', 1)  # `1` is the axis
 
+### fill missing data in a pandas `DataFrame`
+
+    mydf['var'] = mydf['var'].fillna(value)
+
 ### histogram data
 
     import matplotlib.pyplot as plt
@@ -259,6 +263,11 @@ Use `read_table` instead of `read_csv` to get tsv files, etc.
     brk = [0, 5, 10, 16, 17, 18, 20, 25, 60, 80]
     plt.hist(age_acc, bins=brk)  # R defaults to density plot; now Python
     plt.hist(age_acc, bins=brk, normed=True)  # area of column prop-to number
+
+### plot categorical data in a pandas `DataFrame`
+
+    mydf['var'].value_counts()
+    mydf['var'].value_counts().plot(kind='bar')
 
 ### empirical cumulative distribution
 
