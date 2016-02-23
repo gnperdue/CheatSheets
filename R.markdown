@@ -121,6 +121,11 @@ Also, `rank()` may help for breaking ties.
     juul$tanner <- factor(juul$tanner, labels=c("I", "II", "III", "IV", "V"))
     attach(juul)
 
+### remove factors
+
+    my.df$column <- droplevels(my.df$column)     # drop unused factors
+    my.df$column <- as.character(my.df$column)   
+    
 ### sample a vector
 
     n <- 10; k <- 5
