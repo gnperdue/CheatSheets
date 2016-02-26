@@ -231,6 +231,12 @@ Search and Replace
     C-]                     Abort recursive edit and query-replace.
     M-x top-level           Abort recursive edit and query-replace.
 
+Rename
+------
+
+    M-x rename-buffer       Rename a buffer
+    M-x rename-file         Rename a file
+
 Regular Expressions in Search and Replace
 -----------------------------------------
 
