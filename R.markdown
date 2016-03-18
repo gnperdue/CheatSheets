@@ -290,3 +290,16 @@ Get a span of days between a start and a finish:
 
     smallpox <- matrix(c(238,5136,6,844), nrow=2, byrow=TRUE,
     dimnames=list(c("lived","died"), c("yes","no")))
+
+### anova
+
+    f.model <- aov(OBP ~ modpos, data=mlb10.trimmed.df)
+    layout(matrix(c(1,2,3,4),2,2))
+    plot(f.model)
+    pdf("anova_plots_mlb10_trimmed_obp_vs_modpos.pdf")
+    layout(matrix(c(1,2,3,4),2,2))
+    plot(f.model)
+    dev.off()
+    summary(f.model)
+    drop1(f.model,~.,test="F") # type III SS and F Tests
+
