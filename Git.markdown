@@ -262,12 +262,13 @@ Example workflow (`$BRANCH` could be `master` or some other branch):
 
     git remote -v
     git remote add upstream git@github.com:${USER}/${REPONAME}.git
+    git remote add upstream https://github.com/${USER}/${REPONAME}.git  # alt
     git fetch upstream
     git merge upstream/${BRANCH}
 
 And, if you screw up the origin
 
-    git remote rm origin              # or `destination`, etc.
+    git remote rm upstream              # or `destination`, etc.
 
 ## Check out a file from another branch
 
