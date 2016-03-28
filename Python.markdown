@@ -313,3 +313,9 @@ Use `read_table` instead of `read_csv` to get tsv files, etc.
     test_image = Image('full_path/to/file.png')
     display(test_image)
 
+### build a mesh
+
+    xx = np.linspace(0, 5, 6)
+    yy = np.linspace(0, 5, 6)
+    xy1, xy2 = np.meshgrid(xx, yy)
+    [t for t in zip(xy1.flat, xy2.flat)]
