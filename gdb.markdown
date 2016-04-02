@@ -225,6 +225,8 @@ To attach to a live program
         (gdb) attach 11628
         ... etc.
 
+Also, `(c)gdb attach 11628` would work.
+
 TUI 
 ---
 
