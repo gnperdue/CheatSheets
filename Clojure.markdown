@@ -12,10 +12,13 @@
 
 ### Paredit
 
+useful: https://www.emacswiki.org/emacs/PareditCheatsheet
+
 * Use `M-(` for `paredit-wrap-around` and `C-<right arrow>` and `C-<left arrow>`
 in inner parens to "slurp" and "barf".
 * `C-M-f` to move to the closing parens.
 * `C-M-b` to move to the opening parens.
+* Use `M-s` to "slurp" extra parens.
 
 ### CIDER
 
