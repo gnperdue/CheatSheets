@@ -52,6 +52,9 @@
     # merge trunk into the branch I'm working in...
     svn merge svn+ssh://gnperdue@svn.hepforge.org/hepforge/svn/genie/generator/trunk
 
+    # merge another (devel) branch into the branch I'm working in...
+    svn merge svn+ssh://gnperdue@svn.hepforge.org/hepforge/svn/genie/generator/devel/branches/mec_devel
+
     # diffs over a range of commits
     svn diff --summarize -r5547:5681 svn+ssh://gnperdue@svn.hepforge.org/hepforge/svn/genie/generator/branches/R-2_10_2
 
