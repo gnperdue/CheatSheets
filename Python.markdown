@@ -9,6 +9,11 @@ In IPython:
 
     run -d myscript.py
 
+### indexing tricks
+
+    idx = np.zeros(50)
+    idx[np.flatnonzero(f['exclusive-signal'][:50])] = 1
+
 ### simple matplotlib plot with two curves on the same subplot
 
     X = np.linspace(-np.pi, np.pi, 256, endpoint=True)
