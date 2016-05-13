@@ -303,3 +303,9 @@ Get a span of days between a start and a finish:
     summary(f.model)
     drop1(f.model,~.,test="F") # type III SS and F Tests
 
+### extend a list in a loop
+
+    l <- numeric(0)
+    for (i in 1:100) {
+      l <- c(l, i)
+    }
