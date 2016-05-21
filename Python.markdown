@@ -211,6 +211,24 @@ In IPython:
     norm.ppf(0.025)          # equiv to R qnorm(0.25)
     np.asarray([norm.ppf(0.025), norm.ppf(0.975)])
 
+### making a `DataFrame` from `Series`
+
+    nev = pd.Series({'viro failure': 26, 'no failure': 94})
+    lop = pd.Series({'viro failure': 10, 'no failure': 110})
+    df = pd.DataFrame({'nevaripine': nev, 'lopinavir': lop})
+
+### making a `DataFrame` from a NumPy array
+
+    df = pd.DataFrame(np.array([[40, 100], [30, 120]]),
+                      columns=['quit', 'not-quit'], 
+                      index=['support grp', 'no support'])
+
+### chi2 test of independence in a contingency table (here, Pandas `DataFrame`)
+
+Can use any `R x C` table...
+
+    chi2, p, dof, expected = stats.chi2_contingency(df)
+
 ### read a csv with pandas
 
     import os
