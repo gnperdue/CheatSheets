@@ -18,4 +18,15 @@
 * http://neo4j.com/docs/developer-manual/current/#driver-manual-index
 * http://neo4j.com/docs/
 
+# Delete a db
 
+This is ridiculous, but...
+
+    libexec$ pwd
+    /usr/local/Cellar/neo4j/3.0.0/libexec
+    libexec$ ls
+    LICENSES.txt  bin/          conf/         import/       logs/         run/
+    UPGRADE.txt   certificates/ data/         lib/          plugins/
+    libexec$ rm -rf data/*
+
+This blows away the user password too.
