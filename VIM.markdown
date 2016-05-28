@@ -732,3 +732,13 @@ Recipes - Filetype Specific Customization
     ~/.vim/after/ftplugin/javascript.vim
     setlocal ts=4 sts=4 sw=4 noet
     compiler nodelint
+
+Reciples - Change Encoding (e.g. fix Excel exports to csv)
+----------------------------------------------------------
+See: http://stackoverflow.com/questions/64860/best-way-to-convert-text-files-between-character-sets
+
+    $ file Consumer_Complaints_short.csv
+    Consumer_Complaints_short.csv: Non-ISO extended-ASCII English text
+    $ vim +"set nobomb | set fenc=utf8 |x" Consumer_Complaints_short.csv
+    $ file Consumer_Complaints_short.csv
+    Consumer_Complaints_short.csv: UTF-8 Unicode English text
