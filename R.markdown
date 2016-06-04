@@ -311,3 +311,10 @@ Get a span of days between a start and a finish:
     for (i in 1:100) {
       l <- c(l, i)
     }
+
+### quick p-values for chi^2 for multiple values
+
+    > 1 - pchisq(c(66, 55, 76, 50), df=c(12, 50, 61, 62))
+    [1] 1.780205e-09 2.910103e-01 9.347729e-02 8.633089e-01
+
+
