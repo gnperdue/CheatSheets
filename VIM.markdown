@@ -742,3 +742,9 @@ See: http://stackoverflow.com/questions/64860/best-way-to-convert-text-files-bet
     $ vim +"set nobomb | set fenc=utf8 |x" Consumer_Complaints_short.csv
     $ file Consumer_Complaints_short.csv
     Consumer_Complaints_short.csv: UTF-8 Unicode English text
+
+Recipes - search for special characters
+---------------------------------------
+For example, the "new feed" charcter is "^L", this can be searched for with:
+
+    /<ctrl-v><ctrl-l>
