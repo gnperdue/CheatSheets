@@ -54,7 +54,8 @@
     svn merge svn+ssh://gnperdue@svn.hepforge.org/hepforge/svn/genie/generator/trunk
 
     # merge an updated branch back into trunk
-    svn merge --reintegrate svn+ssh://gnperdue@svn.hepforge.org/hepforge/svn/genie/generator/devel/mec_devel
+    svn merge --dry-run --reintegrate svn+ssh://gnperdue@svn.hepforge.org/hepforge/svn/genie/generator/devel/branches/resupdates
+    svn merge --reintegrate svn+ssh://gnperdue@svn.hepforge.org/hepforge/svn/genie/generator/devel/branches/resupdates
 
     # diffs over a range of commits
     svn diff --summarize -r5547:5681 svn+ssh://gnperdue@svn.hepforge.org/hepforge/svn/genie/generator/branches/R-2_10_2
