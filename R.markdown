@@ -95,6 +95,10 @@ D. Witten, T. Hastie, and R. Tibshirani
 
     mydf$column_name <- NULL
 
+### count rows
+
+    nrow(my.df)
+
 ### remove rows from a data.frame
 
     v <- -(10:85)      # vector of elements to remove
