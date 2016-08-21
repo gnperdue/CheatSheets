@@ -35,3 +35,9 @@
 Then:
 
     \url{www.example.com}
+
+### enumerations
+
+Use `\setcounter{enumi}{<value>}` before an `item` to change the value of an
+enumeration counter.
+
