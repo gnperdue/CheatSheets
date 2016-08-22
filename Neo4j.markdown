@@ -7,6 +7,7 @@
 # Misc
 
 * `:help commands` - what commands are available
+* `:help keys` - see keyboard shortcuts for the browser interface
 * `:play sysinfo` - monitoring
 * `:play start` - get the startup welcome menu
 * `:play neo4j-sync` - get their cloud thingy
