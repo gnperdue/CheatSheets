@@ -19,6 +19,8 @@ in inner parens to "slurp" and "barf".
 * `C-M-f` to move to the closing parens.
 * `C-M-b` to move to the opening parens.
 * Use `M-s` to "slurp" extra parens.
+* Use `M-"` for wrapping `"` marks. You can use `C-<right arrow>` to slurp
+more into the string (but barfing does not appear to work).
 
 ### CIDER
 
