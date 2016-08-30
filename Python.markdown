@@ -342,3 +342,12 @@ Use `read_table` instead of `read_csv` to get tsv files, etc.
     yy = np.linspace(0, 5, 6)
     xy1, xy2 = np.meshgrid(xx, yy)
     [t for t in zip(xy1.flat, xy2.flat)]
+
+### row-column conventions
+
+    xs = []
+    ys = []
+    for row_i in range(img.shape[0]):
+        for col_i in range(img.shape[1]):
+            xs.append([row_i, col_i])
+            ys.append(img[row_i, col_i])
