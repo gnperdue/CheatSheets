@@ -91,6 +91,14 @@
     svn revert FOO          # Return to the latest repo. version. 
     svn reset
 
+### Rename a branch
+
+    svn move https://oldbranch https://newbranch
+
+Then,
+
+    svn switch https:://newbranch     # in existing repo checkouts
+
 
 ### Bundle w/o .svn dirs
 
@@ -167,6 +175,7 @@
 
 
 ### Depth
+
 * Set and operate under different ambient depths of the tree. Useful for checkout, 
   status, updates, etc. Encompases (obsoletes?) the recursive and non-recursive flags.
   Useful flags: `-set-depth`, `-set-depth exclude` (prune trees), `-set-depth infity`, 

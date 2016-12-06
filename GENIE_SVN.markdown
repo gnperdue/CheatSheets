@@ -4,11 +4,8 @@
 
     svn co svn+ssh://gnperdue@svn.hepforge.org/hepforge/svn/genie/docs docs
     svn co svn+ssh://gnperdue@svn.hepforge.org/hepforge/svn/genie/generator/trunk trunk
-    svn co svn+ssh://gnperdue@svn.hepforge.org/hepforge/svn/genie/generator/branches/R-2_9_0 R-2_9_0
-    svn co svn+ssh://gnperdue@svn.hepforge.org/hepforge/svn/genie/generator/branches/R-2_10_0 R-2_10_0
-    svn co svn+ssh://gnperdue@svn.hepforge.org/hepforge/svn/genie/generator/branches/R-2_10_2 R-2_10_2
-    svn co svn+ssh://gnperdue@svn.hepforge.org/hepforge/svn/genie/generator/branches/R-2_10_4 R-2_10_4
-    svn co svn+ssh://gnperdue@svn.hepforge.org/hepforge/svn/genie/generator/devel/branches/mec_devel mec_devel
+    svn co svn+ssh://gnperdue@svn.hepforge.org/hepforge/svn/genie/generator/branches/R-2_11_2 R-2_11_2
+    svn co svn+ssh://gnperdue@svn.hepforge.org/hepforge/svn/genie/generator/devel/branches/nucleaon_decay_channel_additions nucleaon_decay_channel_additions
     svn co svn+ssh://gnperdue@svn.hepforge.org/hepforge/svn/genie/generator/devel/branches/resupdates resupdates
     svn co --quiet http://genie.hepforge.org/svn/generator/branches/R-2_9_0 R-2_9_0
     svn co --quiet http://genie.hepforge.org/svn/generator/trunk trunk
@@ -81,7 +78,11 @@ Post-commit hooks:
     /usr/share/subversion/hook-scripts/commit-email.pl \
       "$REPOS" "$REV" perdue@fnal.gov
 
+    svn move -m "GENIE 2.12.6" \
+        svn+ssh://gnperdue@svn.hepforge.org/hepforge/svn/genie/generator/branches/R-2_12_4 \
+        svn+ssh://gnperdue@svn.hepforge.org/hepforge/svn/genie/generator/branches/R-2_12_6
 
+    svn switch svn+ssh://gnperdue@svn.hepforge.org/hepforge/svn/genie/generator/branches/R-2_12_4
 
 ## Old SVN Repo
 
