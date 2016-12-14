@@ -226,7 +226,8 @@ More on remote branches
     git branch {name*} {starting commit - default HEAD}   # Does not switch to the branch! (*wildcard support)
     get checkout {name}                                   # Switch to the branch.
     git checkout -b {name}                                # Create a branch *and* switch to it. This is short-hand for 
-                                                      # "git branch {name}; git checkout {name}"
+                                                          # "git branch {name}; git checkout {name}"
+    git checkout -b {name} origin/{name}                  # Checkout a remote branch (not always needed?)
 
 ## Switch into a Branch
 
