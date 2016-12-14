@@ -34,6 +34,12 @@
     svn export svn+ssh://gnperdue@svn.hepforge.org/hepforge/svn/genie/generator/branches/R-2_10_4 GENIE
     svn export svn+ssh://gnperdue@svn.hepforge.org/hepforge/svn/genie/generator/trunk trunk
 
+    # compare branches
+    svn diff svn+ssh://gnperdue@svn.hepforge.org/hepforge/svn/genie/generator/branches/R-2_12_4 svn+ssh://gnperdue@svn.hepforge.org/hepforge/svn/genie/generator/branches/R-2_12_6
+  
+    # delete a branch (wild...)
+    svn rm svn+ssh://gnperdue@svn.hepforge.org/hepforge/svn/genie/generator/branches/R-2_12_6
+
     svn move -m "rename branch for S. Dytman" \
       svn+ssh://gnperdue@svn.hepforge.org/hepforge/svn/genie/generator/devel/branches/newfsi \
       svn+ssh://gnperdue@svn.hepforge.org/hepforge/svn/genie/generator/devel/branches/spectral_func_vt
@@ -59,6 +65,7 @@
 
     # look at the logs over a range
     svn log -r5547:5681 data/logo/genie_banner_long.txt 
+
 
 #### Untested
 
