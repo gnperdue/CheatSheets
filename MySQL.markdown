@@ -247,6 +247,10 @@ back up the table, then drop it, then follow the steps above:
 * `INSERT()`
 * `REPLACE()`
 
+### count rows
+
+    SELECT Count(*) FROM my_table;
+
 ### count groups
 
     SELECT my_field, COUNT(my_field)
