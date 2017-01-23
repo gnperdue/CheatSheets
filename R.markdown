@@ -86,6 +86,24 @@ D. Witten, T. Hastie, and R. Tibshirani
     n <- length(x)
     plot(sort(x), (1:n)/n, type="s", ylim=c(0, 1))
 
+### distribution functions
+
+For many distributions (binomial, normal, etc.), we have the "dpqr" functions:
+
+* `d<distribution>`, e.g., `dbinom` - the _density_ function, or PDF
+* `p<distribution>`, e.g., `pnorm` - the _distribution_ function, or CDF
+* `q<distribution>`, e.g., `qnorm` - the quantile function
+* `r<distribution>`, e.g., `rbinom` - the random number generator
+
+So, for example, using plots for illustration:
+
+    xx <- seq(0, 100, 1)
+    plot(xx, dbinom(xx, 50, 0.5))
+    plot(xx, pbinom(xx, 50, 0.5))
+    xx <- seq(0, 1, 0.01)
+    plot(xx, qbinom(xx, 50, 0.5))
+    hist(rbinom(100, 50, 0.5))
+
 ### q-q plots
 
     x <- rnorm(50)
