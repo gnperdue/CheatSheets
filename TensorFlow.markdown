@@ -94,3 +94,31 @@
 
         [op.name for op in tf.get_default_graph().get_operations()]
 
+## Creating variables
+
+* We generally want to work within a scope:
+
+        def create_layer(X, n_inp, n_out, act=None, scope=None):
+            with tf.variable_scope(scope or 'layer'):
+                W = tf.get_variable(name='W',
+                                    shape=[n_inp, n_out],
+                                    initializer=tf.random_normal_initializer(
+                                        mean=0.0, stddev=0.1
+                                    )
+                h = tf.matmul(X, W)
+                if activation is not None:
+                    h = activation(h)
+                return h
+
+Note that we also used a TF initializer here - this will create new random
+values every time we call `sess.run(initialize_all_variables())`.
+
+## Reshaping tricks
+
+* We need images to have shape `Batch x H x W x N-Channels` for convolution.
+To go from `[None, n_features]` (where `None` is letting us have an arbitrary
+batch size) we use `-1` in the `reshape()`:
+
+        X = tf.placeholder(tf.float32, [None, n_features])
+        X_tensor = tf.reshape(X, [-1, H, W, NChan])
+
