@@ -1,4 +1,9 @@
 
+### get module location
+
+1. either `python -v`, then `import module_name`, or
+2. `print(sys.modules.items())`
+
 ### debugger tricks in ipython
 
     import pdb
