@@ -256,3 +256,10 @@ back up the table, then drop it, then follow the steps above:
     SELECT my_field, COUNT(my_field)
     FROM my_table
     GROUP BY my_field;
+
+### get with in a range
+
+`[NOT]` is optiona, of course, depending on intent:
+
+    SELECT my_field FROM my_table
+    WHERE [NOT] BETWEEN begin_expr AND end_expr;
