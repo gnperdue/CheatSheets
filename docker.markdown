@@ -7,6 +7,10 @@
     docker-machine ssh dev                         # ssh into the docker host
     docker-machine stop dev                        # when done
 
+## Cleanup
+
+    docker-machine rm <machine name>   # e.g., `dev`, `neuralart`, etc.
+
 ## Look at hosts
 
     docker-machine ls                              # look at hosts
