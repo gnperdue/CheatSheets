@@ -26,6 +26,10 @@
     svn co svn+ssh://gnperdue@svn.hepforge.org/hepforge/svn/genie/generator/devel/branches/Redtop-2_8_6 Redtop-2_8_6
     svn co svn+ssh://gnperdue@svn.hepforge.org/hepforge/svn/genie/generator/devel/branches/mec_devel mec_devel
 
+    // get a specific commit to a different branch and merge it into the current branch
+    svn merge -c 6884 svn+ssh://gnperdue@svn.hepforge.org/hepforge/svn/genie/generator/trunk
+    svn merge -c 6885 svn+ssh://gnperdue@svn.hepforge.org/hepforge/svn/genie/generator/trunk
+
     svn export svn+ssh://gnperdue@svn.hepforge.org/hepforge/svn/genie/generator/devel/branches/honda_flux-trunk_rv5318 honda
     svn export svn+ssh://gnperdue@svn.hepforge.org/hepforge/svn/genie/generator/branches/R-2_9_0 R-2_9_0_export
     svn export svn+ssh://gnperdue@svn.hepforge.org/hepforge/svn/genie/generator/branches/R-2_10_0 GENIE-Generator_v2.10.0
