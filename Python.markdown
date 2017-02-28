@@ -4,6 +4,11 @@
 1. either `python -v`, then `import module_name`, or
 2. `print(sys.modules.items())`
 
+### meta info
+
+    dir(<function name>)    # attributes of a function
+    dir(<object name>)      # attributes of a object
+
 ### debugger tricks in ipython
 
     import pdb
