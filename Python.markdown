@@ -11,6 +11,11 @@ If you use a `setup.py install` approach, do it like this:
 1. either `python -v`, then `import module_name`, or
 2. `print(sys.modules.items())`
 
+### check versions
+
+    import numpy as np
+    print('numpy version: {}'.format(np.__version__))
+
 ### meta info
 
     dir(<function name>)    # attributes of a function
