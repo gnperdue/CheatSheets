@@ -1,4 +1,11 @@
 
+### installing stuff
+
+If you use a `setup.py install` approach, do it like this:
+
+    $ python setup.py install --record files.txt
+    $ cat files.txt | xargs rm -rf  # this will remove all the installed files
+
 ### get module location
 
 1. either `python -v`, then `import module_name`, or
