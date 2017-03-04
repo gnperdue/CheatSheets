@@ -13,7 +13,7 @@
 
     # establish the session and initialize variables
     sess = tf.Session()
-    init = tf.initialize_all_variables()
+    init = tf.global_variables_initializer()
     sess.run(init)
 
     # set up an optimizer (need a cost function)
@@ -93,6 +93,10 @@
 * List the operations in a graph:
 
         [op.name for op in tf.get_default_graph().get_operations()]
+
+* Look at the graph definiton:
+
+        print sess.graph.as_graph_def()
 
 ## Creating variables
 
