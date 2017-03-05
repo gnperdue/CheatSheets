@@ -18,8 +18,12 @@ If you use a `setup.py install` approach, do it like this:
 
 ### meta info
 
-    dir(<function name>)    # attributes of a function
-    dir(<object name>)      # attributes of a object
+    dir(<function name>)      # attributes of a function
+    dir(<object name>)        # attributes of a object
+    <function name>.__doc__   # see docstrings (sometimes, won't work for `+`, etc.)
+                              # for `+`, use `from operator import add`
+    help(<function/object name>)
+    type(<function/object name>)   # trouble with, e.g., `int` (how to `int()`?)
 
 ### debugger tricks in ipython
 
