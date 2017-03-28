@@ -237,13 +237,13 @@ In IPython:
     norm.ppf(0.025)          # equiv to R qnorm(0.25)
     np.asarray([norm.ppf(0.025), norm.ppf(0.975)])
 
-### making a `DataFrame` from `Series`
+### making a Pandas `DataFrame` from `Series`
 
     nev = pd.Series({'viro failure': 26, 'no failure': 94})
     lop = pd.Series({'viro failure': 10, 'no failure': 110})
     df = pd.DataFrame({'nevaripine': nev, 'lopinavir': lop})
 
-### making a `DataFrame` from a NumPy array
+### making a Pandas `DataFrame` from a NumPy array
 
     df = pd.DataFrame(np.array([[40, 100], [30, 120]]),
                       columns=['quit', 'not-quit'], 
@@ -255,7 +255,7 @@ Can use any `R x C` table...
 
     chi2, p, dof, expected = stats.chi2_contingency(df)
 
-### read a csv with pandas
+### read a csv with Pandas
 
     import os
     import pandas as pd
@@ -269,12 +269,12 @@ Can use any `R x C` table...
 
 Use `read_table` instead of `read_csv` to get tsv files, etc.
 
-### read a csv with a datetime index
+### read a csv with a datetime index using Pandas
 
     df = pd.read_csv(filename, parse_dates=True, index_col='Date')
     df.dropna()   # clean out `NaN`s
 
-### plot a count of events binned in time
+### plot a count of events binned in time using Pandas
 
     df = pd.read_csv(filename, parse_dates=True, index_col='Date')
     filtered_df = df[df['Column_name'] == 'value_of_interest']
@@ -283,7 +283,7 @@ Use `read_table` instead of `read_csv` to get tsv files, etc.
     filtered_counted = filtered_by_day.groupby(level=0).count()
     filtered_counted.plot()
 
-### plot categorical activity
+### plot categorical activity with a Pandas `DataFrame`
 
     act = df['Activity']
     unq = act.unique()
@@ -292,15 +292,25 @@ Use `read_table` instead of `read_csv` to get tsv files, etc.
         df['Category'][df['Activity'] == i] = np.where(unq == i)[0][0]
     df.plot(style='ko')
 
-### drop a column from a pandas `DataFrame`
+### drop a column from a Pandas `DataFrame`
 
     energydf = energydf.drop('Unnamed: 0', 1)  # `1` is the axis
 
-### fill missing data in a pandas `DataFrame`
+### fill missing data in a Pandas `DataFrame`
 
     mydf['var'] = mydf['var'].fillna(value)
 
-### histogram data
+### exploratory analysis with Pandas `DataFrame`s
+
+Useful summary statistics, etc.
+
+    mydf.head()
+    mydf.info()
+    mydf.describe()
+    mydf['my_attribute'].value_counts()
+    mydf.hist(bins=N, figsize=(W, H))     # plus, plt.show(), etc.
+
+### histogram data with Matplotlib
 
     import matplotlib.pyplot as plt
     from scipy.stats import norm
