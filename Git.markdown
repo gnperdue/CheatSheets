@@ -192,6 +192,12 @@ Look at remote tags
 
     git ls-remote --tags
 
+`git ls-remote` is generally useful. A nice little workflow
+
+    git remote -v
+    git fetch origin
+    git checkout tags/boffo -b boffo_working
+
 Delete a tag when it has the same name as a branch
 
     git push --delete origin refs/tags/R-2_10_2
