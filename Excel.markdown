@@ -8,7 +8,9 @@
 ### Freeze header rows
 
 Choose "Freeze Panes" or "Freeze Top Row" from the "Layout" tab on a Mac. (It is
-over on the far right, under the "Window" sub menu.)
+over on the far right, under the "Window" sub menu.) Note, you need to select
+the row _below_ the row you want frozen - selecting the top (header) row on
+its own won't do what you want. Select the row below it.
 
 ### Quickly move around
 
