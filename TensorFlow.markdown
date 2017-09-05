@@ -189,3 +189,16 @@ Feeding values is useful for testing, etc.
         replace_dict = {a: 15}
         sess.run(b, feed_dict=replace_dict)  # returns 45
 
+## Simple tensor evaluation
+
+    import tensorflow as tf
+    w = tf.get_variable('weights', [2, 2], initializer=tf.random_normal_initializer())
+    [op.name for op in tf.get_default_graph().get_operations()]
+    with tf.Session() as sess:
+        sess.run(tf.global_variables_initializer())
+        t = tf.get_default_graph().get_tensor_by_name('weights:0').eval()
+        print(t)
+    with tf.Session() as sess:
+        sess.run(tf.global_variables_initializer())
+        t = sess.run(w)
+        print(t)
