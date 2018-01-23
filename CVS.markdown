@@ -7,3 +7,9 @@
 ### checkout
 
     cvs co minervadoc/PB024_MLVertexFinding
+
+### checks
+
+    cvs -n update -Af
+
+
