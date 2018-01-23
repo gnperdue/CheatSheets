@@ -202,3 +202,43 @@ Feeding values is useful for testing, etc.
         sess.run(tf.global_variables_initializer())
         t = sess.run(w)
         print(t)
+
+## Interactive sessions
+
+```
+sess = tf.Session()
+print sess.run(my_tensor)
+sess.close()
+```
+
+Note, even when interactive:
+
+```
+sess = tf.Session()
+print my_tensor.eval(session=sess)
+sess.close()
+```
+
+i.e., need to sepecify the `session` with `eval()`.
+
+## Tensorboard graphs
+
+```
+tf.reset_default_graph()
+writer = tf.summary.FileWriter('./simple_example_graph')
+x = 2
+y = 3
+op1 = tf.add(2, 3)
+op2 = tf.multiply(2, 3)
+op3 = tf.pow(op1, op2)
+with tf.Session() as sess:
+    writer.add_graph(sess.graph)
+writer.close()
+```
+
+## Suppress warnings
+
+```
+import os
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
+```
