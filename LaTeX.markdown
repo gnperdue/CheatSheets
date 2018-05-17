@@ -41,3 +41,11 @@ Then:
 Use `\setcounter{enumi}{<value>}` before an `item` to change the value of an
 enumeration counter.
 
+### matrices
+
+We can use `bmatrix`, `pmatrix`, etc.
+
+    \begin{pmatrix} 
+    \Sigma_x & \Sigma_{xy} \\ 
+    Sigma_{xy}^T & \Sigma_y
+    \end{pmatrix}

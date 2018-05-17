@@ -45,6 +45,11 @@
     TTree *mytree = _file0->Get("MLVFSamplePrepTool");
     TTree *mytree = _file0->Get("NukeCC")
 
+    NukeCC->GetEntries();
+
+    TTree *mytree = _file0->Get("NuECCQE")
+    mytree->MakeClass("NuECCQE")
+
 ### Trees - Draw
 
     mytree->Draw("myvar","","",1)      # 1 event

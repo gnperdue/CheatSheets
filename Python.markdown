@@ -34,6 +34,7 @@ If you use a `setup.py install` approach, do it like this:
 In IPython:
 
     run -d myscript.py
+    run -d -b20 myscript.py <args>   # break at line 20
 
 ### indexing tricks
 

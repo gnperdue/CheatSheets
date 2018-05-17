@@ -4,10 +4,10 @@
 
     svn co svn+ssh://gnperdue@svn.hepforge.org/hepforge/svn/genie/docs docs
     svn co svn+ssh://gnperdue@svn.hepforge.org/hepforge/svn/genie/generator/trunk trunk
-    svn co svn+ssh://gnperdue@svn.hepforge.org/hepforge/svn/genie/generator/branches/R-2_11_2 R-2_11_2
+    svn co svn+ssh://gnperdue@svn.hepforge.org/hepforge/svn/genie/generator/branches/R-2_12_6 R-2_12_6
     svn co svn+ssh://gnperdue@svn.hepforge.org/hepforge/svn/genie/generator/devel/branches/nucleaon_decay_channel_additions nucleaon_decay_channel_additions
     svn co svn+ssh://gnperdue@svn.hepforge.org/hepforge/svn/genie/generator/devel/branches/resupdates resupdates
-    svn co --quiet http://genie.hepforge.org/svn/generator/branches/R-2_9_0 R-2_9_0
+    svn co --quiet http://genie.hepforge.org/svn/generator/branches/R-2_12_6 R-2_12_6
     svn co --quiet http://genie.hepforge.org/svn/generator/trunk trunk
     svn co svn+ssh://gnperdue@svn.hepforge.org/hepforge/svn/genie/comparisons/trunk comparisons_trunk
 
@@ -40,6 +40,10 @@
 
     # compare branches
     svn diff svn+ssh://gnperdue@svn.hepforge.org/hepforge/svn/genie/generator/branches/R-2_12_4 svn+ssh://gnperdue@svn.hepforge.org/hepforge/svn/genie/generator/branches/R-2_12_6
+
+    # compare branches into a patch...
+    svn diff svn+ssh://gnperdue@svn.hepforge.org/hepforge/svn/genie/generator/branches/R-2_12_4 \
+      svn+ssh://gnperdue@svn.hepforge.org/hepforge/svn/genie/generator/branches/R-2_12_6 > diff.patch
   
     # delete a branch (wild...)
     svn rm svn+ssh://gnperdue@svn.hepforge.org/hepforge/svn/genie/generator/branches/R-2_12_6
@@ -69,6 +73,12 @@
 
     # look at the logs over a range
     svn log -r5547:5681 data/logo/genie_banner_long.txt 
+
+    # diff for a specfic commit from another branch
+    svn diff -c 7122 svn+ssh://gnperdue@svn.hepforge.org/hepforge/svn/genie/generator/trunk
+    # merge a spcefici commit from another branch
+    svn merge --dry-run -c 7122 svn+ssh://gnperdue@svn.hepforge.org/hepforge/svn/genie/generator/trunk
+    svn merge -c 7122 svn+ssh://gnperdue@svn.hepforge.org/hepforge/svn/genie/generator/trunk
 
 
 #### Untested
