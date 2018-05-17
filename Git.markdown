@@ -115,6 +115,10 @@ Perform in the directory you wish to be the root.
 
     git pull {repository}             # Fetch *and* merge.
 
+## Force pull to overwrite local changes
+
+    git fetch --all && git reset --hard origin/master
+
 ## Create a Tree Object from the Current Index
 
     git write-tree  
