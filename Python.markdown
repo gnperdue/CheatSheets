@@ -36,6 +36,11 @@ In IPython:
     run -d myscript.py
     run -d -b20 myscript.py <args>   # break at line 20
 
+Debug a function w/o `ipdb`:
+
+    from IPython.core.debugger import Pdb; ipdb=Pdb()
+    ipdb.runcall(myfn, myarg1, myarg2)
+
 ### indexing tricks
 
     idx = np.zeros(50)
