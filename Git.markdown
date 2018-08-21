@@ -318,6 +318,25 @@ And, if you screw up the origin
                                         # Mixed is default!
     git reset --hard {commit}           # Point HEAD to {commit}, modify index contents and working directory.
 
+## Squash the last N commits
+
+    1. ~> git reset --soft HEAD~N             # `N` is a number (e.g. 2)
+    2. ~> git commit -m "new commit message"  # changes will already be staged
+
+*Note:* if pushing squashed commits will change the history on the remote, you
+_must_ put a `+` in front of the branch name, e.g.
+
+    git push origin +name-of-branch
+
+## Squash many commits from a feature branch (significant rewrite of history)
+
+    1. ~> git checkout master && git pull
+    2. ~> git merge feature_branch         # local work
+    3. ~> git reset origin/master          # back to origin state
+
+Now, all changes are considered as unstaged changed and we can stage and commit
+them into one or more commits.
+
 ## Alter Where a Series of Commits is Based
 
     git rebase {branch}                 # DON'T rebase commits you have pushed to a public repository!
