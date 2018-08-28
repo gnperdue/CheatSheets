@@ -41,6 +41,13 @@ Debug a function w/o `ipdb`:
     from IPython.core.debugger import Pdb; ipdb=Pdb()
     ipdb.runcall(myfn, myarg1, myarg2)
 
+Breakpoint in another module
+
+    import sys
+    sys.path.append("/full/path/to/module")
+    import module
+    b module:<line>
+
 ### indexing tricks
 
     idx = np.zeros(50)
