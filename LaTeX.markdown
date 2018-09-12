@@ -45,7 +45,11 @@ enumeration counter.
 
 We can use `bmatrix`, `pmatrix`, etc.
 
-    \begin{pmatrix} 
-    \Sigma_x & \Sigma_{xy} \\ 
+    \begin{pmatrix}
+    \Sigma_x & \Sigma_{xy} \\
     Sigma_{xy}^T & \Sigma_y
     \end{pmatrix}
+
+### nice limits
+
+    \lim\limits_{x \to y}
