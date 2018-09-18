@@ -41,6 +41,34 @@ Then:
 Use `\setcounter{enumi}{<value>}` before an `item` to change the value of an
 enumeration counter.
 
+To get different markers,
+
+```
+\usepackage{enumitem}
+
+%Roman numbers
+\begin{enumerate}[label=(\roman*)]
+%...
+
+% Arabic numbers
+\begin{enumerate}[label=\arabic*)]
+%...
+
+% Alphabetical
+\begin{enumerate}[label=\alph*)]
+%...
+```
+
+Also,
+
+```
+\begin{itemize}
+	\item[--] Dash
+  \item[$-$] Dash
+  \item[$\ast$] Asterisk
+\end{itemize}
+```
+
 ### matrices
 
 We can use `bmatrix`, `pmatrix`, etc.
