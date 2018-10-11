@@ -2,6 +2,7 @@
 
 #### Tested
 
+    svn co svn+ssh://gnperdue@svn.hepforge.org/hepforge/svn/genie/support/unit_tests/trunk ut
     svn co svn+ssh://gnperdue@svn.hepforge.org/hepforge/svn/genie/docs docs
     svn co svn+ssh://gnperdue@svn.hepforge.org/hepforge/svn/genie/generator/trunk trunk
     svn co svn+ssh://gnperdue@svn.hepforge.org/hepforge/svn/genie/generator/branches/R-2_12_6 R-2_12_6
