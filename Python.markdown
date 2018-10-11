@@ -41,6 +41,16 @@ Debug a function w/o `ipdb`:
     from IPython.core.debugger import Pdb; ipdb=Pdb()
     ipdb.runcall(myfn, myarg1, myarg2)
 
+Can also just do this with `pdb`:
+
+    import pdb
+    pdb.runcall(myfn, myarg1, myarg2)
+
+Also, in code
+
+    import pdb; pdb.set_trace()
+    # Python 3.7 - repace this with `breakpoint()` (new built-in)
+
 Breakpoint in another module
 
     import sys
