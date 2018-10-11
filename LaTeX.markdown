@@ -47,7 +47,7 @@ To get different markers,
 \usepackage{enumitem}
 
 %Roman numbers
-\begin{enumerate}[label=(\roman*)]
+\begin{enumerate}[label=\roman*)]
 %...
 
 % Arabic numbers
