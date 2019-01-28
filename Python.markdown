@@ -35,6 +35,7 @@ In IPython:
 
     run -d myscript.py
     run -d -b20 myscript.py <args>   # break at line 20
+    ll                               # long list
 
 Debug a function w/o `ipdb`:
 
