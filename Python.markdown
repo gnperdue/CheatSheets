@@ -25,6 +25,12 @@ If you use a `setup.py install` approach, do it like this:
     help(<function/object name>)
     type(<function/object name>)   # trouble with, e.g., `int` (how to `int()`?)
 
+### quiet warnings
+
+    import warnings
+    # 'error' to stop on warns, 'ignore' to ignore silly matplotlib noise
+    warnings.filterwarnings('ignore')
+
 ### debugger tricks in ipython
 
     import pdb
