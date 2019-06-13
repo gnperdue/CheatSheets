@@ -293,6 +293,7 @@ More on remote branches
 
 ```
 git remote show origin
+git checkout --track upstream/<branch name>  # track remote branch
 ```
 
 ## Examine a Branch
@@ -324,8 +325,8 @@ git fetch; git checkout {remote name}  # Checkout a remote branch
 ## Switch into a Branch
 
 ```
-git checkout {branch}              # git checkout -b {branch} for a new branch
-git checkout --track origin/{branch}               # follow an existing remote
+git checkout {branch}                 # git checkout -b {branch} for new one
+git checkout --track origin/{branch}  # follow an existing remote
 ```
 
 ## Merging into a Branch
