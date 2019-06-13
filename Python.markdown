@@ -417,3 +417,11 @@ Useful summary statistics, etc.
         for col_i in range(img.shape[1]):
             xs.append([row_i, col_i])
             ys.append(img[row_i, col_i])
+
+### check the type of an object without importing the associated module
+
+```
+import sys
+def is_dataframe(x):
+    return isinstance(x, getattr(sys.modules.get('pandas'), 'DataFrame', None))
+```
