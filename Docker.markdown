@@ -1,32 +1,3 @@
-
-## Create a machine (VM on Mac), connect Docker to it
-
-```
-docker-machine create --driver virtualbox dev  # if new
-docker-machine start dev
-eval "$(docker-machine env dev)"
-docker-machine ssh dev                         # ssh into the docker host
-docker-machine stop dev                        # when done
-```
-
-## Cleanup
-
-```
-docker-machine rm <machine name>   # e.g., `dev`, `neuralart`, etc.
-```
-
-## Look at hosts
-
-```
-docker-machine ls                              # look at hosts
-```
-
-## Get help
-
-```
-docker-machine help
-```
-
 ## Images
 
 ```
