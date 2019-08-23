@@ -78,3 +78,9 @@ docker login
 docker tag iqsharp gnperdue/iqsharp
 docker push gnperdue/iqsharp
 ```
+
+## Pulling from DockerHub
+
+```
+docker pull gnperdue/kubia
+```
