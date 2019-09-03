@@ -1,7 +1,24 @@
+## General info
+
+```
+docker --version
+docker info
+```
+
+## Containers
+
+```
+docker container ls
+docker container ls --all     # see stopped containers also
+docker container ls --all -q  # see stopped containers; get the id only
+docker container ls -aq       # see stopped containers; get the id only
+```
+
 ## Images
 
 ```
 docker images           # see what is available
+docker image ls         # see what is available
 docker rmi <image id>   # remove an image
 ```
 
@@ -17,6 +34,7 @@ docker kill        # kill a container
 docker start       # start a container
 docker restart     # restart a container
 docker rm          # remove the container (can't `restart` it then)
+docker stop $(docker ps -q)     # stop all containers
 docker rm $(docker ps -a -q)    # remove all stopped containers
 ```
 
