@@ -148,6 +148,18 @@ git fetch --dry-run               # Don't perform a fetch, just  show what
 git pull {repository}             # Fetch *and* merge.
 ```
 
+## Check out a pull request
+
+Here, `ID` is the pull request number.
+
+```
+git fetch upstream pull/ID/head && git checkout FETCH_HEAD && \
+  git checkout -b test_ID
+```
+
+This gets the pull, checks us out into a 'Detached HEAD', and then puts us onto
+a test branch.
+
 ## Force pull to overwrite local changes
 
 ```
