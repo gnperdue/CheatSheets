@@ -378,6 +378,16 @@ git checkout --track origin/{branch}
 git checkout -b {new name} origin/{branch}
 ```
 
+More tracking a remote branch (with the aim of sending it pull requests):
+
+```
+# <user> is the GitHub user name we want to get the `repo` from:
+git remote add <user> https://github.com/<user>/<repo>.git
+git fetch <user>
+git checkout --track <user>/<branch_we_want_to_target>  # needed?
+git checkout -b <my_branch_name> <user>/<branch_we_want_to_target>
+```
+
 ## Sync to a remote branch on GitHub
 
 Example workflow (`$BRANCH` could be `master` or some other branch):
