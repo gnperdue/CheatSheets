@@ -384,7 +384,7 @@ More tracking a remote branch (with the aim of sending it pull requests):
 # <user> is the GitHub user name we want to get the `repo` from:
 git remote add <user> https://github.com/<user>/<repo>.git
 git fetch <user>
-git checkout --track <user>/<branch_we_want_to_target>  # needed?
+git checkout --track <user>/<branch_we_want_to_target>  # needed? - prob. no.
 git checkout -b <my_branch_name> <user>/<branch_we_want_to_target>
 ```
 
@@ -398,6 +398,13 @@ git remote add upstream git@github.com:${USER}/${REPONAME}.git
 git remote add upstream https://github.com/${USER}/${REPONAME}.git  # alt
 git fetch upstream
 git merge upstream/${BRANCH}
+```
+
+Note, we can have multuple 'upstream' repositories:
+
+```
+git remote add upstream https://github.com/${USER}/${REPONAME}.git  # alt
+git remote add otherup https://github.com/${OTHERUSER}/${REPONAME}.git
 ```
 
 And, if you screw up the origin
