@@ -86,9 +86,17 @@ git commit --dry-run       # Don't actually perform the commit.
 git commit -a              # Commit all, also "--all"
 git commit {file}
 git commit -m "Message" {file}
-git commit --ammend         # Change the top commit
+git commit --amend          # Change the top commit
 git cherry-pick {commit}    # Bring a single commit from another branch.
 git revert {commit}         # "Remove" a given commit from earlier.
+```
+
+Workflow example: commit a file, then add another file to the same commit:
+
+```
+git commit file1
+git add file2
+git commit --amend
 ```
 
 ## Restore a Commit
@@ -362,6 +370,14 @@ git reset --hard ORIG_HEAD        # Abort a merge and go back to right before we
 git merge -s {strategy} {branch}  # Careful!
 ```
 
+Note, in case of conflicts, if you just want to take the new file, use:
+
+```
+git checkout --theirs FILE/PATH
+```
+
+and the continue with the merge.
+
 ## Deleting a Branch
 
 ```
@@ -571,6 +587,18 @@ Other:
 ```
 git stash save "message" --include-untracked
 git stash save "message" --all      
+```
+
+## Git submodule workflows
+
+Pulling upstream changes from the submodule remote.
+
+```
+# go to the submodule directoy
+git fetch
+git merge origin/master
+# go back to main project directory and see what has changed
+git diff --submodule
 ```
 
 ## Move uncommitted work to a new branch (from `master`)
