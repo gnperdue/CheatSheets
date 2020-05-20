@@ -425,3 +425,10 @@ import sys
 def is_dataframe(x):
     return isinstance(x, getattr(sys.modules.get('pandas'), 'DataFrame', None))
 ```
+
+### proper figure resizing in a Jupyter notebook
+
+```
+from IPython.core.pylabtools import figsize
+figsize(11, 9)
+```
