@@ -116,6 +116,10 @@ menu and add them to `~/.atom/snippets.cson`.
 
 * Single click in the tree view for a file preview.
 
+## Tabs
+
+* `ctrl <tab>` - Switch between tabs.
+
 ## Grammar
 
 ...
