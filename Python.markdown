@@ -1,4 +1,11 @@
 
+### module auto reload in ipython
+
+```
+%load_ext autoreload
+%autoreload 2
+```
+
 ### installing stuff
 
 If you use a `setup.py install` approach, do it like this:
