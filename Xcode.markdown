@@ -1,4 +1,8 @@
 
+## Move text
+
+* Move line up or down: `cmd-option-[` or `cmd-option-]`
+
 ## View
 
 * Center screen around cursor: `^l`
