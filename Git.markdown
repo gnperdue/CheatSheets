@@ -376,7 +376,12 @@ Note, in case of conflicts, if you just want to take the new file, use:
 git checkout --theirs FILE/PATH
 ```
 
-and the continue with the merge.
+and the continue with the merge. To just take all the changes on another branch,
+use
+
+```
+git merge upstream/${BRANCH_NAME} -X theirs
+```
 
 ## Deleting a Branch
 
