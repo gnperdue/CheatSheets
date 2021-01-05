@@ -135,3 +135,18 @@ Here we work with samples that featured an empty water target.}
 \label{tbl:acctable}
 \end{table}
 ```
+
+### multiline equations
+
+Note that `split` lives in the `amsmath` package.
+
+```
+\begin{equation}
+\begin{split}
+a =&~ b \\
+  =&~ c \\
+d =&~ e
+\end{split}
+\label{eq:eq}
+\end{equation}
+```
