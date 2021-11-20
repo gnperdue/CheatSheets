@@ -28,3 +28,9 @@ rot(t) = ((x,y),) -> [cos(t)*x + sin(t)*y, -sin(t)*x + cos(t)*y]
 # another way, call with `rot(pi/2)([1, 0])`
 rot(t) = ((x, y),) -> [cos(t) sin(t); -sin(t) cos(t)]*[x, y]
 ```
+
+### matrix product conventions
+
+```
+[1 2] * [1, 2]   # == 5
+```
