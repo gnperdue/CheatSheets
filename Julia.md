@@ -34,3 +34,12 @@ rot(t) = ((x, y),) -> [cos(t) sin(t); -sin(t) cos(t)]*[x, y]
 ```
 [1 2] * [1, 2]   # == 5
 ```
+
+### add a date
+
+```
+using Dates
+datetoday = Dates.today()
+datetoday + Dates.Day(35*7)   # 35 weeks
+datetoday + Dates.Year(1234) + Dates.Month(3) + Dates.Day(2)
+```
