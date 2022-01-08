@@ -150,3 +150,12 @@ d =&~ e
 \label{eq:eq}
 \end{equation}
 ```
+
+### strikethrough text
+
+```
+\usepackage{ulem} % get strikeout
+\normalem         % but don't change behavior of `\emph`
+```
+
+Then, use: `\sout{text we want to strikethrough}`
