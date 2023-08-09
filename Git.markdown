@@ -18,6 +18,17 @@ git help {command}
 git clone git://github.com/gitster/git.git
 ```
 
+## Working with `git-credential-manager`
+
+Now necessary to include usernames in checkout. So, e.g., to clone from cloud GitHub:
+
+* `git clone https://<username>@github.com/.../repo.git`,
+
+and from SQMS Enterprise GitHub:
+
+* `git clone https://<username>@ghe-sqms.fnal.gov/.../repo.git`
+
+
 ## `.gitignore`
 
 1. Blank lines are ignored, and a pound sign (`#`) can be used for comments.
