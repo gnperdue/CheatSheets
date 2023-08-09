@@ -432,6 +432,12 @@ git fetch upstream
 git merge upstream/${BRANCH}
 ```
 
+Note, for cloud vs enterprise resolution, need to add `<username>`, e.g.
+
+```
+git remote add upstream https://<username>@github.com/${USER}/${REPONAME}.git
+```
+
 Note, we can have multuple 'upstream' repositories:
 
 ```
