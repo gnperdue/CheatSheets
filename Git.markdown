@@ -445,10 +445,16 @@ git remote add upstream https://github.com/${USER}/${REPONAME}.git  # alt
 git remote add otherup https://github.com/${OTHERUSER}/${REPONAME}.git
 ```
 
-And, if you screw up the origin
+And, if you screw up the path:
 
 ```
 git remote rm upstream              # or `destination`, etc.
+```
+
+Also, we can edit the paths, e.g.
+
+```
+git remote set-url origin <new_url>
 ```
 
 ## Check out a file from another branch
