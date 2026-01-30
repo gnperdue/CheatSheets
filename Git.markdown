@@ -45,7 +45,7 @@ lower directories override higher directories.
 ```
 git config --global user.name "John Doe"
 git config --global user.email johndoe@example.com
-git config --global core.editor vim  
+git config --global core.editor vim
 ```
 
 ## Check Your Configuration
@@ -188,7 +188,7 @@ git fetch --all && git reset --hard origin/master
 ## Create a Tree Object from the Current Index
 
 ```
-git write-tree  
+git write-tree
 ```
 
 ## Examine a Repository
@@ -230,7 +230,7 @@ Relative Commit Names
 ~ the previous commit in the ancestry chain.
 
 ```
-git log --pretty=short --abbrev-commit master~4..master~2   
+git log --pretty=short --abbrev-commit master~4..master~2
                                     # Since..Until - used for commit ranges.
 ```
 
@@ -503,7 +503,7 @@ git diff --shortstst integration_b master      # just the total number of
 
 ```
 git reset HEAD                 # Unstage changes, restore.
-git reset HEAD^                # Unstage changes, restore to commit just   
+git reset HEAD^                # Unstage changes, restore to commit just
                                # before HEAD. (Remove the topmost commit, often
                                # explicity "--mixed".)
 git reset --soft {commit}      # Go back to {commit}, but leave index and
@@ -568,53 +568,53 @@ Put everything into a quick stash and get a clean working area. ("Interrupted
 Work")
 
 ```
-git stash save "message"            
+git stash save "message"
 ```
 
 Restore (& drop) a stashed state. Git will attempt a merge. (Only pop into a
 "clean" area!)
 
 ```
-git stash pop                       
+git stash pop
 ```
 
 "Look" at the stash.
 
 ```
-git show-branch stash               
+git show-branch stash
 ```
 
 Restore the stash but don't drop it from the index.
 
 ```
-git stash apply                     
+git stash apply
 ```
 
 Drop the stash (so, "pop = apply (followed by) drop").
 
 ```
-git stash drop                      
+git stash drop
 ```
 
 Convert the stash into a new branch based on the commit at the time the stash
 was stashed.
 
 ```
-git stash branch                    
+git stash branch
 ```
 
 List the stashes (that haven't been dropped), `stash@{1}` is older than
 `stash@{0}`.
 
 ```
-git stash show                      
+git stash show
 ```
 
 Other:
 
 ```
 git stash save "message" --include-untracked
-git stash save "message" --all      
+git stash save "message" --all
 ```
 
 ## Git submodule workflows
@@ -640,13 +640,13 @@ git commit
 At this point, `master` has been reset:
 
 ```
-git checkout master  
+git checkout master
 ```
 
 `new_branch` will contain the changes
 
 ```
-git checkout new_branch   
+git checkout new_branch
 git push origin new_branch
 ```
 
@@ -655,7 +655,7 @@ git push origin new_branch
 Two steps:
 
 1. `git fetch`
-2. `git reset --hard origin/master`   
+2. `git reset --hard origin/master`
 
 Where, of course, `master` is the branch you want.
 
@@ -672,3 +672,9 @@ here they are anyway (mostly as a one-time log of everything working):
 
 GitHub goes on to tell you how to merge into master instead of pushing the new
 branch, but I want to push the new branch...
+
+## Create an "export" of a repo with no `.git` detritus (destination path must exist)
+
+```
+git archive main | tar -x -C /path/to/destination
+```
