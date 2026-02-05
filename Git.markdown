@@ -489,6 +489,26 @@ git diff --stat                     # Add statistics.
 git diff --color                    # Colorize the output.
 ```
 
+## Rebase for cleaner history
+
+Use this to integrate changes from `main` into your feature branch before opening
+a Pull Request. This keeps history linear and clean.
+
+```
+git checkout main && git pull origin main
+git checkout <feature-branch>
+git rebase main
+```
+
+If you have already pushed to a remote, you must force-push:
+
+```
+git push origin <feature-branch> --force-with-lease
+```
+
+*Note:* **Never** rebase a branch that other people are also working on.
+Use `git merge main` instead if the branch is shared.
+
 ## Diff's between branches
 
 ```
