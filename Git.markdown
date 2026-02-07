@@ -457,6 +457,13 @@ Also, we can edit the paths, e.g.
 git remote set-url origin <new_url>
 ```
 
+## Check to see if a feature branch is missing comits to `main`
+
+```
+get fetch                           # refresh remote info
+git log HEAD..main --oneline        # compare HEAD to main, keep it concise
+```
+
 ## GitHub CLI for upstream work
 
 Managed with `gh repo set-default`?
