@@ -457,6 +457,16 @@ Also, we can edit the paths, e.g.
 git remote set-url origin <new_url>
 ```
 
+## GitHub CLI for upstream work
+
+Managed with `gh repo set-default`?
+
+```
+gh repo set-default --help
+gh repo set-default --view
+```
+
+
 ## Check out a file from another branch
 
 ```
