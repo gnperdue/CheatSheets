@@ -40,3 +40,17 @@ To check why the report is empty, inspect the MongoDB failures collection:
 4. Check for failures: `db.failures.countDocuments({})`
 5. View a failure: `db.failures.findOne()`
 6. If `db.failures` is empty, check `db.results`: `db.results.countDocuments({})`. If both are empty, the script is likely not finding any files to process (check paths).
+
+## More `mongosh`
+
+```
+show dbs                                  # list dbs
+show collections
+db.failures.find().limit(5)               # examine 5 records from the `failures` collection
+db.failures.distinct("model")             # see the unique set of values
+db.results.distinct("test_config.model")  # drill down in hierarchy
+db.results.countDocuments({})
+
+// Remove all existing failures so we can start fresh
+db.failures.deleteMany({});
+```
